@@ -26,7 +26,7 @@
                 "isDefault": true
             },
             "problemMatcher": [
-                "$gcc"
+                "$go"
             ],
             "presentation": {
                 "reveal": "silent", // hides “Executing task…” lines
