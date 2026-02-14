@@ -7,4 +7,4 @@ int main() {
     cout << "bye" <<  endl;
     cout << "bye" <<  endl;
     return 0;
-}
+} 
