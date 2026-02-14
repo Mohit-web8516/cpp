@@ -59,4 +59,5 @@ int main (){
     cout << second :: x << endl; 
     
     cout <<  x << endl; 
+    return 0;
 }
