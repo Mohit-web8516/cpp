@@ -1,14 +1,19 @@
-include <iostream>
-// using namespace std;
-// int main(){
+#include<iostream>
 
-//     int arr[5] = {1, 2, 3, 4, 5}; // Declaration and initialization of an array
-//     cout << "Elements of the array : " << endl;
-//     for (int i = 0; i < 5; i++) {
-//         cout << arr[i] << "  " << endl; // Accessing elements using index
-//     }
-//     cout << arr[2] << endl; // Accessing the third element (index 2)
-//     cout << endl;
-    
-//     return 0;
-// }
+using namespace std;
+
+int main()
+{
+    const int SIZE = 100;
+    string foods[SIZE];
+
+    fill(foods, foods + (SIZE/3), "pizza");
+    fill(foods + (SIZE/3), foods + (SIZE/3)*2,"HAMBURGER", "pizza");
+    fill(foods + (SIZE/3)*2, foods + SIZE, "HOTDOG");
+
+
+    for(string food : foods){
+        cout << food << '\n';
+    }
+    return 0 ;
+}
