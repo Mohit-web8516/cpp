@@ -37,15 +37,28 @@
 
 
 ///////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int add(int a, int b) {
+//     return a + b;
+// }
+
+// int main() {
+//     cout << "Sum: " << add(5, 7);
+//     return 0;
+// }
+
+
+///////////////////////
 #include <iostream>
 using namespace std;
 
-int add(int a, int b) {
-    return a + b;
-}
-
 int main() {
-    cout << "Sum: " << add(5, 7);
+    int arr[5] = {10, 20, 30, 40, 50};
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
     return 0;
 }
 
