@@ -64,15 +64,38 @@
 
 
 ////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int x = 42;
+//     int *ptr = &x;
+//     cout << "Value: " << *ptr << ", Address: " << ptr;
+//     return 0;
+// }
+
+
+///////////////////////////////
 #include <iostream>
 using namespace std;
 
+class Student {
+public:
+    string name;
+    int age;
+    void display() {
+        cout << name << " is " << age << " years old.";
+    }
+};
+
 int main() {
-    int x = 42;
-    int *ptr = &x;
-    cout << "Value: " << *ptr << ", Address: " << ptr;
+    Student s1;
+    s1.name = "john";
+    s1.age = 20;
+    s1.display();
     return 0;
 }
+
 
 
 
