@@ -76,25 +76,78 @@
 
 
 ///////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// class Student {
+// public:
+//     string name;
+//     int age;
+//     void display() {
+//         cout << name << " is " << age << " years old.";
+//     }
+// };
+
+// int main() {
+//     Student s1;
+//     s1.name = "john";
+//     s1.age = 20;
+//     s1.display();
+//     return 0;
+// }
+
+////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// class Animal {
+// public:
+//     void sound() { cout << "Animal makes sound\n"; }
+// };
+
+// class Dog : public Animal {
+// public:
+//     void sound() { cout << "Dog barks\n"; }
+// };
+
+// int main() {
+//     Dog d;
+//     d.sound();
+//     return 0;
+// }
+/////////////////////////////////
+////////////////////////////////
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+
+// int main() {
+//     ofstream fout("test.txt");
+//     fout << "Hello File!";
+//     fout.close();
+
+//     ifstream fin("test.txt");
+//     string line;
+//     getline(fin, line);
+//     cout << line;
+//     fin.close();
+//     return 0;
+// }
+
+//////////////////////////////////
+/////////////////////////////////
 #include <iostream>
+#include <vector>
 using namespace std;
 
-class Student {
-public:
-    string name;
-    int age;
-    void display() {
-        cout << name << " is " << age << " years old.";
-    }
-};
-
 int main() {
-    Student s1;
-    s1.name = "john";
-    s1.age = 20;
-    s1.display();
+    vector<int> v = {1, 2, 3};
+    v.push_back(4);
+
+    for (int x : v) cout << x << " ";
     return 0;
 }
+
 
 
 
