@@ -233,26 +233,53 @@
 
 //////////////////////////
 ///////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Enter size of array: ";
+//     cin >> n;
+
+//     int arr[n];
+//     cout << "Enter elements: ";
+//     for(int i = 0; i < n; i++) cin >> arr[i];
+
+//     // Reverse logic
+//     for(int i = 0; i < n/2; i++) {
+//         int temp = arr[i];
+//         arr[i] = arr[n-i-1];
+//         arr[n-i-1] = temp;
+//     }
+
+//     cout << "Reversed Array: ";
+//     for(int i = 0; i < n; i++) cout << arr[i] << " ";
+//     return 0;
+// }
+
+
+///////////////////////////////////
+//////////////////////////////////
 #include <iostream>
 using namespace std;
 
 int main() {
-    int n;
-    cout << "Enter size of array: ";
-    cin >> n;
+    string str;
+    cout << "Enter a word: ";
+    cin >> str;
 
-    int arr[n];
-    cout << "Enter elements: ";
-    for(int i = 0; i < n; i++) cin >> arr[i];
+    bool isPalindrome = true;
+    int n = str.length();
 
-    // Reverse logic
     for(int i = 0; i < n/2; i++) {
-        int temp = arr[i];
-        arr[i] = arr[n-i-1];
-        arr[n-i-1] = temp;
+        if(str[i] != str[n-i-1]) {
+            isPalindrome = false;
+            break;
+        }
     }
 
-    cout << "Reversed Array: ";
-    for(int i = 0; i < n; i++) cout << arr[i] << " ";
+    if(isPalindrome) cout << str << " is a Palindrome" << endl;
+    else cout << str << " is Not a Palindrome" << endl;
+
     return 0;
 }
