@@ -456,30 +456,51 @@
 
 //////////////////////////////////
 ////////////////////////////////
-#include <algorithm>
+// #include <algorithm>
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     // Array example
+//     int nums[] = {5, 3, 8, 1};
+
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     sort(nums, nums + n);
+//     cout << "Sorted array: ";
+//     for (int i = 0; i < n; i++)
+//         cout << nums[i] << " ";
+//     cout << endl;
+
+//     // Vector example
+//     vector<int> list = {5, 3, 8, 1};
+
+//     sort(list.begin(), list.end());
+//     cout << "Sorted vector: ";
+//     for (int num : list)
+//         cout << num << " ";
+
+//     return 0;
+// }
+
+////////////////////////////
+////////////////////////////
 #include <iostream>
-#include <vector>
+#include <sstream> // for stringstream
 using namespace std;
 
 int main()
 {
-    // Array example
-    int nums[] = {5, 3, 8, 1};
+    // Mutable string
+    string s = "Hello Geeks";
+    cout << s << endl;
 
-    int n = sizeof(nums) / sizeof(nums[0]);
-    sort(nums, nums + n);
-    cout << "Sorted array: ";
-    for (int i = 0; i < n; i++)
-        cout << nums[i] << " ";
-    cout << endl;
-
-    // Vector example
-    vector<int> list = {5, 3, 8, 1};
-
-    sort(list.begin(), list.end());
-    cout << "Sorted vector: ";
-    for (int num : list)
-        cout << num << " ";
+    // Using stringstream for efficient string modification
+    stringstream ss;
+    ss << "Hello";
+    ss << " Geeks";
+    cout << ss.str() << endl;
 
     return 0;
 }
