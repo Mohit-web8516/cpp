@@ -508,32 +508,66 @@
 
 //////////////////////
 //////////////////////
+// #include <iostream>
+// #include <set>
+// #include <unordered_set>
+// using namespace std;
+
+// int main()
+// {
+//     // set (sorted, unique elements)
+//     set<int> s{10, 20, 20, 30};
+//     cout << "set: ";
+//     for (auto &x : s)
+//         cout << x << " ";
+//     cout << endl;
+
+//     // unordered_set (no order, unique elements)
+//     unordered_set<int> us{10, 20, 20, 30};
+//     cout << "unordered_set: ";
+//     for (auto &x : us)
+//         cout << x << " ";
+//     cout << endl;
+
+//     // multiset (sorted, allows duplicates)
+//     multiset<int> ms{10, 20, 20, 30};
+//     cout << "multiset: ";
+//     for (auto &x : ms)
+//         cout << x << " ";
+//     cout << endl;
+
+//     return 0;
+// }
+
+
+//////////////////////////////////////
+//////////////////////////
 #include <iostream>
-#include <set>
-#include <unordered_set>
+#include <map>
+#include <unordered_map>
 using namespace std;
 
 int main()
 {
-    // set (sorted, unique elements)
-    set<int> s{10, 20, 20, 30};
-    cout << "set: ";
-    for (auto &x : s)
-        cout << x << " ";
+    // map (sorted by keys)
+    map<int, string> m{{1, "apple"}, {3, "banana"}, {2, "cherry"}};
+    cout << "map: ";
+    for (auto &p : m)
+        cout << p.first << "->" << p.second << " ";
     cout << endl;
 
-    // unordered_set (no order, unique elements)
-    unordered_set<int> us{10, 20, 20, 30};
-    cout << "unordered_set: ";
-    for (auto &x : us)
-        cout << x << " ";
+    // unordered_map (no specific order)
+    unordered_map<int, string> um{{1, "red"}, {2, "green"}, {3, "blue"}};
+    cout << "unordered_map: ";
+    for (auto &p : um)
+        cout << p.first << "->" << p.second << " ";
     cout << endl;
 
-    // multiset (sorted, allows duplicates)
-    multiset<int> ms{10, 20, 20, 30};
-    cout << "multiset: ";
-    for (auto &x : ms)
-        cout << x << " ";
+    // multimap (allows duplicate keys)
+    multimap<int, string> mm{{1, "cat"}, {1, "dog"}, {2, "bird"}};
+    cout << "multimap: ";
+    for (auto &p : mm)
+        cout << p.first << "->" << p.second << " ";
     cout << endl;
 
     return 0;
