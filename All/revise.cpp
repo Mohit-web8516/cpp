@@ -374,21 +374,50 @@
 
 ////////////////////////////
 /////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int plusFuncInt(int x, int y) {
+//   return x + y;
+// }
+
+// double plusFuncDouble(double x, double y) {
+//   return x + y;
+// }
+
+// int main() {
+//   int myNum1 = plusFuncInt(8, 5);
+//   double myNum2 = plusFuncDouble(4.3, 6.26);
+//   cout << "Int: " << myNum1 << "\n";
+//   cout << "Double: " << myNum2;
+//   return 0;
+// }
+////////////////////////////////
+///////////////////////////////
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int plusFuncInt(int x, int y) {
-  return x + y;
-}
+int main()
+{
+    // Array example
+    int arr[] = {10, 20, 30, 40, 50};
+    
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << "Array elements: ";
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
 
-double plusFuncDouble(double x, double y) {
-  return x + y;
-}
+    // Vector Example
+    vector<int> list;
+    
+    list.push_back(10);
+    list.push_back(20);
+    list.push_back(30);
+    cout << "Vector elements: ";
+    for (int i = 0; i < list.size(); i++)
+        cout << list[i] << " ";
 
-int main() {
-  int myNum1 = plusFuncInt(8, 5);
-  double myNum2 = plusFuncDouble(4.3, 6.26);
-  cout << "Int: " << myNum1 << "\n";
-  cout << "Double: " << myNum2;
-  return 0;
+    return 0;
 }
