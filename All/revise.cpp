@@ -179,29 +179,52 @@
 // }
 /////////////////////////////////
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     bool isPrime = true;
+//     cout << "Enter a number: ";
+//     cin >> n;
+
+//     if (n <= 1) isPrime = false;
+//     else {
+//         for(int i = 2; i <= n/2; i++) {
+//             if(n % i == 0) {
+//                 isPrime = false;
+//                 break;
+//             }
+//         }
+//     }
+
+//     if(isPrime) cout << n << " is Prime" << endl;
+//     else cout << n << " is Not Prime" << endl;
+
+//     return 0;
+// }
+
+
+/////////////////////////////////
+
 #include <iostream>
 using namespace std;
 
-int main() {
-    int n;
-    bool isPrime = true;
-    cout << "Enter a number: ";
-    cin >> n;
+class Student {
+public:
+    string name;
+    int age;
 
-    if (n <= 1) isPrime = false;
-    else {
-        for(int i = 2; i <= n/2; i++) {
-            if(n % i == 0) {
-                isPrime = false;
-                break;
-            }
-        }
+    void display() {
+        cout << "Name: " << name << ", Age: " << age << endl;
     }
+};
 
-    if(isPrime) cout << n << " is Prime" << endl;
-    else cout << n << " is Not Prime" << endl;
+int main() {
+    Student s1;
+    s1.name = "john";
+    s1.age = 20;
+    s1.display();
 
     return 0;
 }
-
-
