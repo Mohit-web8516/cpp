@@ -425,30 +425,61 @@
 
 ////////////////////////////////
 ///////////////////////////////
+// #include <algorithm>
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> vec = {2, 4, 6, 6, 8, 10};
+//     int key = 6;
+
+//     // Linear search (works on unsorted too)
+//     bool found = (find(vec.begin(), vec.end(), key) != vec.end());
+//     cout << "Found (linear): " << found << "\n";
+
+//     // Binary search (requires sorted)
+//     bool binaryFound = binary_search(vec.begin(), vec.end(), key);
+//     cout << "Found (binary): " << binaryFound << "\n";
+
+//     // lower_bound: first position not less than key (i.e. first ≥ key)
+//     int firstIndex = lower_bound(vec.begin(), vec.end(), key) - vec.begin();
+//     cout << "First ≥ key at index: " << firstIndex << "\n";
+
+//     // upper_bound: first position greater than key
+//     int afterIndex = upper_bound(vec.begin(), vec.end(), key) - vec.begin();
+//     cout << "First > key at index: " << afterIndex << "\n";
+
+//     return 0;
+// }
+
+
+//////////////////////////////////
+////////////////////////////////
 #include <algorithm>
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int main() {
-    vector<int> vec = {2, 4, 6, 6, 8, 10};
-    int key = 6;
+int main()
+{
+    // Array example
+    int nums[] = {5, 3, 8, 1};
 
-    // Linear search (works on unsorted too)
-    bool found = (find(vec.begin(), vec.end(), key) != vec.end());
-    cout << "Found (linear): " << found << "\n";
+    int n = sizeof(nums) / sizeof(nums[0]);
+    sort(nums, nums + n);
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++)
+        cout << nums[i] << " ";
+    cout << endl;
 
-    // Binary search (requires sorted)
-    bool binaryFound = binary_search(vec.begin(), vec.end(), key);
-    cout << "Found (binary): " << binaryFound << "\n";
+    // Vector example
+    vector<int> list = {5, 3, 8, 1};
 
-    // lower_bound: first position not less than key (i.e. first ≥ key)
-    int firstIndex = lower_bound(vec.begin(), vec.end(), key) - vec.begin();
-    cout << "First ≥ key at index: " << firstIndex << "\n";
-
-    // upper_bound: first position greater than key
-    int afterIndex = upper_bound(vec.begin(), vec.end(), key) - vec.begin();
-    cout << "First > key at index: " << afterIndex << "\n";
+    sort(list.begin(), list.end());
+    cout << "Sorted vector: ";
+    for (int num : list)
+        cout << num << " ";
 
     return 0;
 }
