@@ -150,17 +150,32 @@
 
 
 /////////////////////////////////
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void myFunction() {
-  cout << "I just got executed!";
-}
+// void myFunction() {
+//   cout << "I just got executed!";
+// }
 
-int main() {
-  myFunction();
-  return 0;
-}
+// int main() {
+//   myFunction();
+//   return 0;
+// }
 
+//////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n, fact = 1;
+//     cout << "Enter a number: ";
+//     cin >> n;
+
+//     for(int i = 1; i <= n; i++) {
+//         fact *= i;
+//     }
+//     cout << "Factorial = " << fact << endl;
+//     return 0;
+// }
 
 
