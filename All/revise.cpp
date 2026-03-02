@@ -394,30 +394,61 @@
 // }
 ////////////////////////////////
 ///////////////////////////////
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     // Array example
+//     int arr[] = {10, 20, 30, 40, 50};
+    
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     cout << "Array elements: ";
+//     for (int i = 0; i < n; i++)
+//         cout << arr[i] << " ";
+//     cout << endl;
+
+//     // Vector Example
+//     vector<int> list;
+    
+//     list.push_back(10);
+//     list.push_back(20);
+//     list.push_back(30);
+//     cout << "Vector elements: ";
+//     for (int i = 0; i < list.size(); i++)
+//         cout << list[i] << " ";
+
+//     return 0;
+// }
+
+
+////////////////////////////////
+///////////////////////////////
+#include <algorithm>
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int main()
-{
-    // Array example
-    int arr[] = {10, 20, 30, 40, 50};
-    
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout << "Array elements: ";
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+int main() {
+    vector<int> vec = {2, 4, 6, 6, 8, 10};
+    int key = 6;
 
-    // Vector Example
-    vector<int> list;
-    
-    list.push_back(10);
-    list.push_back(20);
-    list.push_back(30);
-    cout << "Vector elements: ";
-    for (int i = 0; i < list.size(); i++)
-        cout << list[i] << " ";
+    // Linear search (works on unsorted too)
+    bool found = (find(vec.begin(), vec.end(), key) != vec.end());
+    cout << "Found (linear): " << found << "\n";
+
+    // Binary search (requires sorted)
+    bool binaryFound = binary_search(vec.begin(), vec.end(), key);
+    cout << "Found (binary): " << binaryFound << "\n";
+
+    // lower_bound: first position not less than key (i.e. first ≥ key)
+    int firstIndex = lower_bound(vec.begin(), vec.end(), key) - vec.begin();
+    cout << "First ≥ key at index: " << firstIndex << "\n";
+
+    // upper_bound: first position greater than key
+    int afterIndex = upper_bound(vec.begin(), vec.end(), key) - vec.begin();
+    cout << "First > key at index: " << afterIndex << "\n";
 
     return 0;
 }
