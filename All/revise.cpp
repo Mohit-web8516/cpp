@@ -572,3 +572,129 @@ int main()
 
     return 0;
 }
+
+
+
+/////////////////////////
+////////////////////////
+#include <iostream>
+using namespace std;
+
+int fact(int n)
+{
+    if (n == 0)
+        return 1;
+    return n * fact(n - 1);
+}
+
+int main()
+{
+    cout << fact(5); 
+    return 0;
+}
+
+
+
+//////////////////////////////
+///////////////////////////
+///////////////////////////////
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main()
+{
+    queue<int> q;
+
+    // Add elements to the queue
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    // Remove elements from the queue (FIFO)
+    while (!q.empty())
+    {
+        cout << q.front() << " ";
+        q.pop();
+    }
+
+    return 0;
+}
+
+
+
+///////////////////////////////
+////////////////////////////////
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main()
+{
+    stack<string> st;
+
+    // Push elements onto the stack
+    st.push("g");
+    st.push("f");
+    st.push("h");
+
+    // Print the initial stack by popping elements
+    cout << "Stack Content (top to bottom): ";
+    while (!st.empty())
+    {
+        cout << st.top() << " ";
+        st.pop();
+    }
+
+    return 0;
+}
+
+
+
+
+//////////////////////////////
+/////////////////////////////
+#include <iostream>
+using namespace std;
+
+class Node
+{
+  public:
+    int data;
+    Node *next;
+
+
+
+    Node(int d)
+    {
+        data = d;
+        next = nullptr;
+    }
+};
+
+int main()
+{
+    // Create nodes
+    Node *head = new Node(10);
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+
+
+
+
+
+
+    // Traverse and print the linked list
+    Node *temp = head;
+    while (temp != nullptr)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+
+
+
+
+    
+    return 0;
+}
