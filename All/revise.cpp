@@ -288,35 +288,86 @@
 //////////////////////////////
 /////////////////////////////
 
+// #include <iostream>
+// using namespace std;
+
+// int binarySearch(int arr[], int n, int key) {
+//     int low = 0, high = n-1;
+//     while(low <= high) {
+//         int mid = (low + high) / 2;
+//         if(arr[mid] == key) return mid;
+//         else if(arr[mid] < key) low = mid + 1;
+//         else high = mid - 1;
+//     }
+//     return -1;
+// }
+
+// int main() {
+//     int n, key;
+//     cout << "Enter size of sorted array: ";
+//     cin >> n;
+
+//     int arr[n];
+//     cout << "Enter elements in sorted order: ";
+//     for(int i = 0; i < n; i++) cin >> arr[i];
+
+//     cout << "Enter element to search: ";
+//     cin >> key;
+
+//     int result = binarySearch(arr, n, key);
+//     if(result != -1) cout << "Element found at index " << result << endl;
+//     else cout << "Element not found" << endl;
+
+//     return 0;
+// }
+
+
+///////////////////////////////////
+//////////////////////////////////
 #include <iostream>
 using namespace std;
 
-int binarySearch(int arr[], int n, int key) {
-    int low = 0, high = n-1;
-    while(low <= high) {
-        int mid = (low + high) / 2;
-        if(arr[mid] == key) return mid;
-        else if(arr[mid] < key) low = mid + 1;
-        else high = mid - 1;
-    }
-    return -1;
-}
-
 int main() {
-    int n, key;
-    cout << "Enter size of sorted array: ";
-    cin >> n;
+    int r1, c1, r2, c2;
+    cout << "Enter rows and cols of first matrix: ";
+    cin >> r1 >> c1;
+    cout << "Enter rows and cols of second matrix: ";
+    cin >> r2 >> c2;
 
-    int arr[n];
-    cout << "Enter elements in sorted order: ";
-    for(int i = 0; i < n; i++) cin >> arr[i];
+    if(c1 != r2) {
+        cout << "Matrix multiplication not possible!" << endl;
+        return 0;
+    }
 
-    cout << "Enter element to search: ";
-    cin >> key;
+    int A[r1][c1], B[r2][c2], C[r1][c2];
 
-    int result = binarySearch(arr, n, key);
-    if(result != -1) cout << "Element found at index " << result << endl;
-    else cout << "Element not found" << endl;
+    cout << "Enter first matrix: ";
+    for(int i = 0; i < r1; i++)
+        for(int j = 0; j < c1; j++)
+            cin >> A[i][j];
+
+    cout << "Enter second matrix: ";
+    for(int i = 0; i < r2; i++)
+        for(int j = 0; j < c2; j++)
+            cin >> B[i][j];
+
+    // Multiplication
+    for(int i = 0; i < r1; i++) {
+        for(int j = 0; j < c2; j++) {
+            C[i][j] = 0;
+            for(int k = 0; k < c1; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    cout << "Resultant Matrix: " << endl;
+    for(int i = 0; i < r1; i++) {
+        for(int j = 0; j < c2; j++) {
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
