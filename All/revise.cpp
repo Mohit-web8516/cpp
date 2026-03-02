@@ -486,21 +486,55 @@
 
 ////////////////////////////
 ////////////////////////////
+// #include <iostream>
+// #include <sstream> // for stringstream
+// using namespace std;
+
+// int main()
+// {
+//     // Mutable string
+//     string s = "Hello Geeks";
+//     cout << s << endl;
+
+//     // Using stringstream for efficient string modification
+//     stringstream ss;
+//     ss << "Hello";
+//     ss << " Geeks";
+//     cout << ss.str() << endl;
+
+//     return 0;
+// }
+
+
+//////////////////////
+//////////////////////
 #include <iostream>
-#include <sstream> // for stringstream
+#include <set>
+#include <unordered_set>
 using namespace std;
 
 int main()
 {
-    // Mutable string
-    string s = "Hello Geeks";
-    cout << s << endl;
+    // set (sorted, unique elements)
+    set<int> s{10, 20, 20, 30};
+    cout << "set: ";
+    for (auto &x : s)
+        cout << x << " ";
+    cout << endl;
 
-    // Using stringstream for efficient string modification
-    stringstream ss;
-    ss << "Hello";
-    ss << " Geeks";
-    cout << ss.str() << endl;
+    // unordered_set (no order, unique elements)
+    unordered_set<int> us{10, 20, 20, 30};
+    cout << "unordered_set: ";
+    for (auto &x : us)
+        cout << x << " ";
+    cout << endl;
+
+    // multiset (sorted, allows duplicates)
+    multiset<int> ms{10, 20, 20, 30};
+    cout << "multiset: ";
+    for (auto &x : ms)
+        cout << x << " ";
+    cout << endl;
 
     return 0;
 }
