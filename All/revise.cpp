@@ -324,50 +324,71 @@
 
 ///////////////////////////////////
 //////////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int r1, c1, r2, c2;
+//     cout << "Enter rows and cols of first matrix: ";
+//     cin >> r1 >> c1;
+//     cout << "Enter rows and cols of second matrix: ";
+//     cin >> r2 >> c2;
+
+//     if(c1 != r2) {
+//         cout << "Matrix multiplication not possible!" << endl;
+//         return 0;
+//     }
+
+//     int A[r1][c1], B[r2][c2], C[r1][c2];
+
+//     cout << "Enter first matrix: ";
+//     for(int i = 0; i < r1; i++)
+//         for(int j = 0; j < c1; j++)
+//             cin >> A[i][j];
+
+//     cout << "Enter second matrix: ";
+//     for(int i = 0; i < r2; i++)
+//         for(int j = 0; j < c2; j++)
+//             cin >> B[i][j];
+
+//     // Multiplication
+//     for(int i = 0; i < r1; i++) {
+//         for(int j = 0; j < c2; j++) {
+//             C[i][j] = 0;
+//             for(int k = 0; k < c1; k++) {
+//                 C[i][j] += A[i][k] * B[k][j];
+//             }
+//         }
+//     }
+
+//     cout << "Resultant Matrix: " << endl;
+//     for(int i = 0; i < r1; i++) {
+//         for(int j = 0; j < c2; j++) {
+//             cout << C[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+////////////////////////////
+/////////////////////////////
 #include <iostream>
 using namespace std;
 
+int plusFuncInt(int x, int y) {
+  return x + y;
+}
+
+double plusFuncDouble(double x, double y) {
+  return x + y;
+}
+
 int main() {
-    int r1, c1, r2, c2;
-    cout << "Enter rows and cols of first matrix: ";
-    cin >> r1 >> c1;
-    cout << "Enter rows and cols of second matrix: ";
-    cin >> r2 >> c2;
-
-    if(c1 != r2) {
-        cout << "Matrix multiplication not possible!" << endl;
-        return 0;
-    }
-
-    int A[r1][c1], B[r2][c2], C[r1][c2];
-
-    cout << "Enter first matrix: ";
-    for(int i = 0; i < r1; i++)
-        for(int j = 0; j < c1; j++)
-            cin >> A[i][j];
-
-    cout << "Enter second matrix: ";
-    for(int i = 0; i < r2; i++)
-        for(int j = 0; j < c2; j++)
-            cin >> B[i][j];
-
-    // Multiplication
-    for(int i = 0; i < r1; i++) {
-        for(int j = 0; j < c2; j++) {
-            C[i][j] = 0;
-            for(int k = 0; k < c1; k++) {
-                C[i][j] += A[i][k] * B[k][j];
-            }
-        }
-    }
-
-    cout << "Resultant Matrix: " << endl;
-    for(int i = 0; i < r1; i++) {
-        for(int j = 0; j < c2; j++) {
-            cout << C[i][j] << " ";
-        }
-        cout << endl;
-    }
-
-    return 0;
+  int myNum1 = plusFuncInt(8, 5);
+  double myNum2 = plusFuncDouble(4.3, 6.26);
+  cout << "Int: " << myNum1 << "\n";
+  cout << "Double: " << myNum2;
+  return 0;
 }
