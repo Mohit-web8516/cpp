@@ -41,22 +41,37 @@
 
 ///////////////////////////////////////////////
 
+// #include <iostream>
+// using namespace std;
+
+// class Base {
+// public:
+//     void greet() { cout << "Hello from Base\n"; }
+// };
+
+// class Derived : public Base {
+// public:
+//     void show() { cout << "Hello from Derived\n"; }
+// };
+
+// int main() {
+//     Derived d;
+//     d.greet();
+//     d.show();
+// }
+
+///////////////////////////////////////
 #include <iostream>
 using namespace std;
 
-class Base {
-public:
-    void greet() { cout << "Hello from Base\n"; }
-};
+class A { public: void msgA(){ cout<<"Class A\n"; } };
+class B { public: void msgB(){ cout<<"Class B\n"; } };
 
-class Derived : public Base {
-public:
-    void show() { cout << "Hello from Derived\n"; }
+class C : public A, public B {
+public: void msgC(){ cout<<"Class C\n"; }
 };
 
 int main() {
-    Derived d;
-    d.greet();
-    d.show();
+    C obj;
+    obj.msgA(); obj.msgB(); obj.msgC();
 }
-
