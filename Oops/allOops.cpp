@@ -79,18 +79,38 @@
 
 
 ///////////////////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// class Math {
+// public:
+//     int add(int a, int b) { return a+b; }
+//     double add(double a, double b) { return a+b; }
+// };
+
+// int main() {
+//     Math m;
+//     cout << m.add(5, 3) << endl;
+//     cout << m.add(2.5, 3.7) << endl;
+// }
+
+///////////////////////////////////////////////////////
 #include <iostream>
 using namespace std;
 
-class Math {
+class Base {
 public:
-    int add(int a, int b) { return a+b; }
-    double add(double a, double b) { return a+b; }
+    virtual void show() { cout << "Base class\n"; }
+};
+
+class Derived : public Base {
+public:
+    void show() override { cout << "Derived class\n"; }
 };
 
 int main() {
-    Math m;
-    cout << m.add(5, 3) << endl;
-    cout << m.add(2.5, 3.7) << endl;
+    Base* ptr;
+    Derived d;
+    ptr = &d;
+    ptr->show(); // Calls Derived version
 }
-
