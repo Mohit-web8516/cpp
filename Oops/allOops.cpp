@@ -119,19 +119,39 @@
 //////////////////////////////////////////////
 
 
+// #include <iostream>
+// using namespace std;
+
+// class Account {
+// private:
+//     int balance;
+// public:
+//     void setBalance(int b) { balance = b; }
+//     int getBalance() { return balance; }
+// };
+
+// int main() {
+//     Account acc;
+//     acc.setBalance(5000);
+//     cout << "Balance: " << acc.getBalance();
+// }
+
+///////////////////////////////////////////////
 #include <iostream>
 using namespace std;
 
-class Account {
-private:
-    int balance;
+class Complex {
+    int real, imag;
 public:
-    void setBalance(int b) { balance = b; }
-    int getBalance() { return balance; }
+    Complex(int r=0, int i=0) : real(r), imag(i) {}
+    Complex operator + (Complex const &obj) {
+        return Complex(real + obj.real, imag + obj.imag);
+    }
+    void display() { cout << real << " + " << imag << "i\n"; }
 };
 
 int main() {
-    Account acc;
-    acc.setBalance(5000);
-    cout << "Balance: " << acc.getBalance();
+    Complex c1(3,4), c2(1,2);
+    Complex c3 = c1 + c2;
+    c3.display();
 }
