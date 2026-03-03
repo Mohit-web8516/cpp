@@ -1,0 +1,700 @@
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     string name;
+//     cout << "Enter your name: ";
+//     cin >> name;
+//     cout << "Hello, " << name << "!" << endl;
+//     return 0;
+// }
+
+
+////////////////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int age;
+//     cout << "Enter your age: ";
+//     cin >> age;
+
+//     if (age >= 18) cout << "You are an adult.";
+//     else cout << "You are a minor.";
+//     return 0;
+// }
+
+////////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     for (int i = 1; i <= 5; i++) {
+//         cout << "Iteration " << i << endl;
+//     }
+//     return 0;
+// }
+
+
+///////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int add(int a, int b) {
+//     return a + b;
+// }
+
+// int main() {
+//     cout << "Sum: " << add(5, 7);
+//     return 0;
+// }
+
+
+///////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[5] = {10, 20, 30, 40, 50};
+//     for (int i = 0; i < 5; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     return 0;
+// }
+
+
+////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int x = 42;
+//     int *ptr = &x;
+//     cout << "Value: " << *ptr << ", Address: " << ptr;
+//     return 0;
+// }
+
+
+///////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// class Student {
+// public:
+//     string name;
+//     int age;
+//     void display() {
+//         cout << name << " is " << age << " years old.";
+//     }
+// };
+
+// int main() {
+//     Student s1;
+//     s1.name = "john";
+//     s1.age = 20;
+//     s1.display();
+//     return 0;
+// }
+
+////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// class Animal {
+// public:
+//     void sound() { cout << "Animal makes sound\n"; }
+// };
+
+// class Dog : public Animal {
+// public:
+//     void sound() { cout << "Dog barks\n"; }
+// };
+
+// int main() {
+//     Dog d;
+//     d.sound();
+//     return 0;
+// }
+/////////////////////////////////
+////////////////////////////////
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+
+// int main() {
+//     ofstream fout("test.txt");
+//     fout << "Hello File!";
+//     fout.close();
+
+//     ifstream fin("test.txt");
+//     string line;
+//     getline(fin, line);
+//     cout << line;
+//     fin.close();
+//     return 0;
+// }
+
+//////////////////////////////////
+/////////////////////////////////
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> v = {1, 2, 3};
+//     v.push_back(4);
+
+//     for (int x : v) cout << x << " ";
+//     return 0;
+// }
+
+
+/////////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// void myFunction() {
+//   cout << "I just got executed!";
+// }
+
+// int main() {
+//   myFunction();
+//   return 0;
+// }
+
+//////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n, fact = 1;
+//     cout << "Enter a number: ";
+//     cin >> n;
+
+//     for(int i = 1; i <= n; i++) {
+//         fact *= i;
+//     }
+//     cout << "Factorial = " << fact << endl;
+//     return 0;
+// }
+/////////////////////////////////
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     bool isPrime = true;
+//     cout << "Enter a number: ";
+//     cin >> n;
+
+//     if (n <= 1) isPrime = false;
+//     else {
+//         for(int i = 2; i <= n/2; i++) {
+//             if(n % i == 0) {
+//                 isPrime = false;
+//                 break;
+//             }
+//         }
+//     }
+
+//     if(isPrime) cout << n << " is Prime" << endl;
+//     else cout << n << " is Not Prime" << endl;
+
+//     return 0;
+// }
+
+
+/////////////////////////////////
+
+// #include <iostream>
+// using namespace std;
+
+// class Student {
+// public:
+//     string name;
+//     int age;
+
+//     void display() {
+//         cout << "Name: " << name << ", Age: " << age << endl;
+//     }
+// };
+
+// int main() {
+//     Student s1;
+//     s1.name = "john";
+//     s1.age = 20;
+//     s1.display();
+
+//     return 0;
+// }
+
+
+
+//////////////////////////
+///////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Enter size of array: ";
+//     cin >> n;
+
+//     int arr[n];
+//     cout << "Enter elements: ";
+//     for(int i = 0; i < n; i++) cin >> arr[i];
+
+//     // Reverse logic
+//     for(int i = 0; i < n/2; i++) {
+//         int temp = arr[i];
+//         arr[i] = arr[n-i-1];
+//         arr[n-i-1] = temp;
+//     }
+
+//     cout << "Reversed Array: ";
+//     for(int i = 0; i < n; i++) cout << arr[i] << " ";
+//     return 0;
+// }
+
+
+///////////////////////////////////
+//////////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     string str;
+//     cout << "Enter a word: ";
+//     cin >> str;
+
+//     bool isPalindrome = true;
+//     int n = str.length();
+
+//     for(int i = 0; i < n/2; i++) {
+//         if(str[i] != str[n-i-1]) {
+//             isPalindrome = false;
+//             break;
+//         }
+//     }
+
+//     if(isPalindrome) cout << str << " is a Palindrome" << endl;
+//     else cout << str << " is Not a Palindrome" << endl;
+
+//     return 0;
+// }
+
+
+//////////////////////////////
+/////////////////////////////
+
+// #include <iostream>
+// using namespace std;
+
+// int binarySearch(int arr[], int n, int key) {
+//     int low = 0, high = n-1;
+//     while(low <= high) {
+//         int mid = (low + high) / 2;
+//         if(arr[mid] == key) return mid;
+//         else if(arr[mid] < key) low = mid + 1;
+//         else high = mid - 1;
+//     }
+//     return -1;
+// }
+
+// int main() {
+//     int n, key;
+//     cout << "Enter size of sorted array: ";
+//     cin >> n;
+
+//     int arr[n];
+//     cout << "Enter elements in sorted order: ";
+//     for(int i = 0; i < n; i++) cin >> arr[i];
+
+//     cout << "Enter element to search: ";
+//     cin >> key;
+
+//     int result = binarySearch(arr, n, key);
+//     if(result != -1) cout << "Element found at index " << result << endl;
+//     else cout << "Element not found" << endl;
+
+//     return 0;
+// }
+
+
+///////////////////////////////////
+//////////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int r1, c1, r2, c2;
+//     cout << "Enter rows and cols of first matrix: ";
+//     cin >> r1 >> c1;
+//     cout << "Enter rows and cols of second matrix: ";
+//     cin >> r2 >> c2;
+
+//     if(c1 != r2) {
+//         cout << "Matrix multiplication not possible!" << endl;
+//         return 0;
+//     }
+
+//     int A[r1][c1], B[r2][c2], C[r1][c2];
+
+//     cout << "Enter first matrix: ";
+//     for(int i = 0; i < r1; i++)
+//         for(int j = 0; j < c1; j++)
+//             cin >> A[i][j];
+
+//     cout << "Enter second matrix: ";
+//     for(int i = 0; i < r2; i++)
+//         for(int j = 0; j < c2; j++)
+//             cin >> B[i][j];
+
+//     // Multiplication
+//     for(int i = 0; i < r1; i++) {
+//         for(int j = 0; j < c2; j++) {
+//             C[i][j] = 0;
+//             for(int k = 0; k < c1; k++) {
+//                 C[i][j] += A[i][k] * B[k][j];
+//             }
+//         }
+//     }
+
+//     cout << "Resultant Matrix: " << endl;
+//     for(int i = 0; i < r1; i++) {
+//         for(int j = 0; j < c2; j++) {
+//             cout << C[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+////////////////////////////
+/////////////////////////////
+// #include <iostream>
+// using namespace std;
+
+// int plusFuncInt(int x, int y) {
+//   return x + y;
+// }
+
+// double plusFuncDouble(double x, double y) {
+//   return x + y;
+// }
+
+// int main() {
+//   int myNum1 = plusFuncInt(8, 5);
+//   double myNum2 = plusFuncDouble(4.3, 6.26);
+//   cout << "Int: " << myNum1 << "\n";
+//   cout << "Double: " << myNum2;
+//   return 0;
+// }
+////////////////////////////////
+///////////////////////////////
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     // Array example
+//     int arr[] = {10, 20, 30, 40, 50};
+    
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     cout << "Array elements: ";
+//     for (int i = 0; i < n; i++)
+//         cout << arr[i] << " ";
+//     cout << endl;
+
+//     // Vector Example
+//     vector<int> list;
+    
+//     list.push_back(10);
+//     list.push_back(20);
+//     list.push_back(30);
+//     cout << "Vector elements: ";
+//     for (int i = 0; i < list.size(); i++)
+//         cout << list[i] << " ";
+
+//     return 0;
+// }
+
+
+////////////////////////////////
+///////////////////////////////
+// #include <algorithm>
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> vec = {2, 4, 6, 6, 8, 10};
+//     int key = 6;
+
+//     // Linear search (works on unsorted too)
+//     bool found = (find(vec.begin(), vec.end(), key) != vec.end());
+//     cout << "Found (linear): " << found << "\n";
+
+//     // Binary search (requires sorted)
+//     bool binaryFound = binary_search(vec.begin(), vec.end(), key);
+//     cout << "Found (binary): " << binaryFound << "\n";
+
+//     // lower_bound: first position not less than key (i.e. first ≥ key)
+//     int firstIndex = lower_bound(vec.begin(), vec.end(), key) - vec.begin();
+//     cout << "First ≥ key at index: " << firstIndex << "\n";
+
+//     // upper_bound: first position greater than key
+//     int afterIndex = upper_bound(vec.begin(), vec.end(), key) - vec.begin();
+//     cout << "First > key at index: " << afterIndex << "\n";
+
+//     return 0;
+// }
+
+
+//////////////////////////////////
+////////////////////////////////
+// #include <algorithm>
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     // Array example
+//     int nums[] = {5, 3, 8, 1};
+
+//     int n = sizeof(nums) / sizeof(nums[0]);
+//     sort(nums, nums + n);
+//     cout << "Sorted array: ";
+//     for (int i = 0; i < n; i++)
+//         cout << nums[i] << " ";
+//     cout << endl;
+
+//     // Vector example
+//     vector<int> list = {5, 3, 8, 1};
+
+//     sort(list.begin(), list.end());
+//     cout << "Sorted vector: ";
+//     for (int num : list)
+//         cout << num << " ";
+
+//     return 0;
+// }
+
+////////////////////////////
+////////////////////////////
+// #include <iostream>
+// #include <sstream> // for stringstream
+// using namespace std;
+
+// int main()
+// {
+//     // Mutable string
+//     string s = "Hello Geeks";
+//     cout << s << endl;
+
+//     // Using stringstream for efficient string modification
+//     stringstream ss;
+//     ss << "Hello";
+//     ss << " Geeks";
+//     cout << ss.str() << endl;
+
+//     return 0;
+// }
+
+
+//////////////////////
+//////////////////////
+// #include <iostream>
+// #include <set>
+// #include <unordered_set>
+// using namespace std;
+
+// int main()
+// {
+//     // set (sorted, unique elements)
+//     set<int> s{10, 20, 20, 30};
+//     cout << "set: ";
+//     for (auto &x : s)
+//         cout << x << " ";
+//     cout << endl;
+
+//     // unordered_set (no order, unique elements)
+//     unordered_set<int> us{10, 20, 20, 30};
+//     cout << "unordered_set: ";
+//     for (auto &x : us)
+//         cout << x << " ";
+//     cout << endl;
+
+//     // multiset (sorted, allows duplicates)
+//     multiset<int> ms{10, 20, 20, 30};
+//     cout << "multiset: ";
+//     for (auto &x : ms)
+//         cout << x << " ";
+//     cout << endl;
+
+//     return 0;
+// }
+
+
+//////////////////////////////////////
+//////////////////////////
+#include <iostream>
+#include <map>
+#include <unordered_map>
+using namespace std;
+
+int main()
+{
+    // map (sorted by keys)
+    map<int, string> m{{1, "apple"}, {3, "banana"}, {2, "cherry"}};
+    cout << "map: ";
+    for (auto &p : m)
+        cout << p.first << "->" << p.second << " ";
+    cout << endl;
+
+    // unordered_map (no specific order)
+    unordered_map<int, string> um{{1, "red"}, {2, "green"}, {3, "blue"}};
+    cout << "unordered_map: ";
+    for (auto &p : um)
+        cout << p.first << "->" << p.second << " ";
+    cout << endl;
+
+    // multimap (allows duplicate keys)
+    multimap<int, string> mm{{1, "cat"}, {1, "dog"}, {2, "bird"}};
+    cout << "multimap: ";
+    for (auto &p : mm)
+        cout << p.first << "->" << p.second << " ";
+    cout << endl;
+
+    return 0;
+}
+
+
+
+/////////////////////////
+////////////////////////
+#include <iostream>
+using namespace std;
+
+int fact(int n)
+{
+    if (n == 0)
+        return 1;
+    return n * fact(n - 1);
+}
+
+int main()
+{
+    cout << fact(5); 
+    return 0;
+}
+
+
+
+//////////////////////////////
+///////////////////////////
+///////////////////////////////
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main()
+{
+    queue<int> q;
+
+    // Add elements to the queue
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    // Remove elements from the queue (FIFO)
+    while (!q.empty())
+    {
+        cout << q.front() << " ";
+        q.pop();
+    }
+
+    return 0;
+}
+
+
+
+///////////////////////////////
+////////////////////////////////
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main()
+{
+    stack<string> st;
+
+    // Push elements onto the stack
+    st.push("g");
+    st.push("f");
+    st.push("h");
+
+    // Print the initial stack by popping elements
+    cout << "Stack Content (top to bottom): ";
+    while (!st.empty())
+    {
+        cout << st.top() << " ";
+        st.pop();
+    }
+
+    return 0;
+}
+
+
+
+
+//////////////////////////////
+/////////////////////////////
+#include <iostream>
+using namespace std;
+
+class Node
+{
+  public:
+    int data;
+    Node *next;
+
+
+
+    Node(int d)
+    {
+        data = d;
+        next = nullptr;
+    }
+};
+
+int main()
+{
+    // Create nodes
+    Node *head = new Node(10);
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+
+
+
+
+
+
+    // Traverse and print the linked list
+    Node *temp = head;
+    while (temp != nullptr)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+
+
+
+
+    
+    return 0;
+}
