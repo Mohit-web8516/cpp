@@ -116,19 +116,65 @@
 
 //Encapsulation
 
+// #include <iostream>
+// using namespace std;
+
+// class Account {
+// private:
+//     int balance;
+// public:
+//     void setBalance(int b) { balance = b; }
+//     int getBalance() { return balance; }
+// };
+
+// int main() {
+//     Account acc;
+//     acc.setBalance(5000);
+//     cout << "Balance: " << acc.getBalance();
+// }
+
+
+//Operator Overloading
+
+// #include <iostream>
+// using namespace std;
+
+// class Complex {
+//     int real, imag;
+// public:
+//     Complex(int r=0, int i=0) : real(r), imag(i) {}
+//     Complex operator + (Complex const &obj) {
+//         return Complex(real + obj.real, imag + obj.imag);
+//     }
+//     void display() { cout << real << " + " << imag << "i\n"; }
+// };
+
+// int main() {
+//     Complex c1(3,4), c2(1,2);
+//     Complex c3 = c1 + c2;
+//     c3.display();
+// }
+
+
+//Abstract Class AND pure virtual function
+
 #include <iostream>
 using namespace std;
 
-class Account {
-private:
-    int balance;
+class Shape {
 public:
-    void setBalance(int b) { balance = b; }
-    int getBalance() { return balance; }
+    virtual void area() = 0; // Pure virtual function
+};
+
+class Circle : public Shape {
+    int r;
+public:
+    Circle(int radius) : r(radius) {}
+    void area() override { cout << "Area: " << 3.14*r*r << endl; }
 };
 
 int main() {
-    Account acc;
-    acc.setBalance(5000);
-    cout << "Balance: " << acc.getBalance();
+    Shape* s = new Circle(5);
+    s->area();
+    delete s;
 }
