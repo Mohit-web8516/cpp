@@ -56,17 +56,35 @@
 
 //Multiple Inheritence
 
+// #include <iostream>
+// using namespace std;
+
+// class A { public: void msgA(){ cout<<"Class A\n"; } };
+// class B { public: void msgB(){ cout<<"Class B\n"; } };
+
+// class C : public A, public B {
+// public: void msgC(){ cout<<"Class C\n"; }
+// };
+
+// int main() {
+//     C obj;
+//     obj.msgA(); obj.msgB(); obj.msgC();
+// }
+
+
+//Function Overloading
+
 #include <iostream>
 using namespace std;
 
-class A { public: void msgA(){ cout<<"Class A\n"; } };
-class B { public: void msgB(){ cout<<"Class B\n"; } };
-
-class C : public A, public B {
-public: void msgC(){ cout<<"Class C\n"; }
+class Math {
+public:
+    int add(int a, int b) { return a+b; }
+    double add(double a, double b) { return a+b; }
 };
 
 int main() {
-    C obj;
-    obj.msgA(); obj.msgB(); obj.msgC();
+    Math m;
+    cout << m.add(5, 3) << endl;
+    cout << m.add(2.5, 3.7) << endl;
 }
