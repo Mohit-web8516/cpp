@@ -158,26 +158,26 @@
 
 //Abstract Class AND pure virtual function
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-class Shape {
-public:
-    virtual void area() = 0; // Pure virtual function
-};
+// class Shape {
+// public:
+//     virtual void area() = 0; // Pure virtual function
+// };
 
-class Circle : public Shape {
-    int r;
-public:
-    Circle(int radius) : r(radius) {}
-    void area() override { cout << "Area: " << 3.14*r*r << endl; }
-};
+// class Circle : public Shape {
+//     int r;
+// public:
+//     Circle(int radius) : r(radius) {}
+//     void area() override { cout << "Area: " << 3.14*r*r << endl; }
+// };
 
-int main() {
-    Shape* s = new Circle(5);
-    s->area();
-    delete s;
-}
+// int main() {
+//     Shape* s = new Circle(5);
+//     s->area();
+//     delete s;
+// }
 
 
 //file handling with oop
