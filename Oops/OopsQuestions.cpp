@@ -181,3 +181,29 @@ int main() {
 
 
 //file handling with oop
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class FileDemo {
+public:
+    void writeFile() {
+        ofstream fout("data.txt");
+        fout << "Hello OOP in C++";
+        fout.close();
+    }
+    void readFile() {
+        ifstream fin("data.txt");
+        string line;
+        while(getline(fin, line)) {
+            cout << line << endl;
+        }
+        fin.close();
+    }
+};
+
+int main() {
+    FileDemo f;
+    f.writeFile();
+    f.readFile();
+}
