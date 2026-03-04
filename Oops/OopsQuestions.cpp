@@ -178,3 +178,6 @@ int main() {
     s->area();
     delete s;
 }
+
+
+//file handling with oop
