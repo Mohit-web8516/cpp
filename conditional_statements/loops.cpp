@@ -111,18 +111,53 @@
 
 ///Sum of digits of a number
 
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int n , sum = 0;
+//     cout << "Enter your number : ";
+//     cin >> n;
+
+//     while (n > 0){
+//         int digit = n % 10;
+//         sum = sum + digit;
+//         n = n / 10;
+//     }
+//     cout << "Sum of digit = " << sum;
+//     return 0;
+// }
+
+
+
+////////////////////////////////////
+//Check if a number is prime
 #include <iostream>
 using namespace std;
-int main(){
-    int n , sum = 0;
-    cout << "Enter your number : ";
+
+int main() {
+    int n;
+    cout << "Enter your number: ";
     cin >> n;
 
-    while (n > 0){
-        int digit = n % 10;
-        sum = sum + digit;
-        n = n / 10;
+    bool isPrime = true;   // assume prime
+    int i = 2;
+
+    if (n <= 1) {
+        isPrime = false;   // 0 and 1 are not prime
+    } else {
+        while (i <= n / 2) {   // check divisors up to n/2
+            if (n % i == 0) {
+                isPrime = false;
+                break;         // found a divisor, exit loop
+            }
+            i++;
+        }
     }
-    cout << "Sum of digit = " << sum;
+
+    if (isPrime)
+        cout << n << " is prime";
+    else
+        cout << n << " is not prime";
+
     return 0;
 }
