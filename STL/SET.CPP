@@ -111,3 +111,28 @@ Duplicates are not allowed.
 Internally implemented as a hash table.
 
 Average time complexity for operations is O(1) (worst case O(n)).*/
+
+
+/////////////////////////////////////////
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+
+int main() {
+    unordered_set<int> us;
+
+    us.insert(10);
+    us.insert(20);
+    us.insert(30);
+    us.insert(20); // duplicate ignored
+
+    cout << "Unordered set elements: ";
+    for(auto x : us) cout << x << " ";
+    cout << endl;
+
+    cout << "Count of 20: " << us.count(20) << endl;
+
+    us.erase(30);
+    cout << "After erase, elements: ";
+    for(auto x : us) cout << x << " ";
+}
