@@ -20,49 +20,61 @@ begin() / end()	Iterators for traversal
 lower_bound(x)	First element ≥ x
 upper_bound(x)	First element > x*/
 
-#include <iostream>
-#include <set>
-using namespace std;
+// #include <iostream>
+// #include <set>
+// using namespace std;
 
-int main() {
-    set<int> s;
+// int main() {
+//     set<int> s;
 
-    // 1. insert()
-    s.insert(10);
-    s.insert(20);
-    s.insert(30);
-    s.insert(20); // duplicate ignored
+//     // 1. insert()
+//     s.insert(10);
+//     s.insert(20);
+//     s.insert(30);
+//     s.insert(20); // duplicate ignored
 
-    // 2. size()
-    cout << "Size of set: " << s.size() << endl;
+//     // 2. size()
+//     cout << "Size of set: " << s.size() << endl;
 
-    // 3. empty()
-    cout << (s.empty() ? "Set is empty" : "Set is not empty") << endl;
+//     // 3. empty()
+//     cout << (s.empty() ? "Set is empty" : "Set is not empty") << endl;
 
-    // 4. count()
-    cout << "Count of 20: " << s.count(20) << endl;
-    cout << "Count of 50: " << s.count(50) << endl;
+//     // 4. count()
+//     cout << "Count of 20: " << s.count(20) << endl;
+//     cout << "Count of 50: " << s.count(50) << endl;
 
-    // 5. find()
-    auto it = s.find(30);
-    if(it != s.end())
-        cout << "Found: " << *it << endl;
+//     // 5. find()
+//     auto it = s.find(30);
+//     if(it != s.end())
+//         cout << "Found: " << *it << endl;
 
-    // 6. erase()
-    s.erase(20);
+//     // 6. erase()
+//     s.erase(20);
 
-    // 7. Traversal
-    cout << "Elements in set: ";
-    for(auto x : s) cout << x << " ";
-    cout << endl;
+//     // 7. Traversal
+//     cout << "Elements in set: ";
+//     for(auto x : s) cout << x << " ";
+//     cout << endl;
 
-    // 8. lower_bound & upper_bound
-    cout << "Lower bound of 15: " << *s.lower_bound(15) << endl;
-    cout << "Upper bound of 15: " << *s.upper_bound(15) << endl;
+//     // 8. lower_bound & upper_bound
+//     cout << "Lower bound of 15: " << *s.lower_bound(15) << endl;
+//     cout << "Upper bound of 15: " << *s.upper_bound(15) << endl;
 
-    // 9. clear()
-    s.clear();
-    cout << "After clear, size: " << s.size() << endl;
+//     // 9. clear()
+//     s.clear();
+//     cout << "After clear, size: " << s.size() << endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
+////////////////////////////////////////////
+/*multiset
+Stores elements in sorted order (ascending by default).
+
+Duplicates are allowed (unlike set).
+
+Internally implemented as a balanced BST (Red-Black Tree).
+
+Operations (insert, erase, find) are O(log n).*/
+
+/////////////////////////////////
