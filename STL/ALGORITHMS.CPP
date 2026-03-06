@@ -197,17 +197,17 @@
 //     int a = 10, b = 20;
 //     swap(a, b);
 //     cout << "After swap: a = " << a << ", b = " << b << endl;
-}
+// }
 ///////////////////////////////////////////////
 //MAX
-// #include <iostream>
-// #include <algorithm> // for max
-// using namespace std;
+#include <iostream>
+#include <algorithm> // for max
+using namespace std;
 
-// int main() {
-//     int x = 15, y = 25;
-//     cout << "Maximum is: " << max(x, y) << endl;
-// }
+int main() {
+    int x = 15, y = 25;
+    cout << "Maximum is: " << max(x, y) << endl;
+}
 
 
 ///////////////////////////////////////////
