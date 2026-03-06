@@ -73,4 +73,56 @@ clear()	Remove all elements*/
 //         cout << p.first << " occurs " << p.second << " times\n";
 //     }
 // }
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+
+
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    // Declare a map of int -> string
+    map<int, string> students;
+
+    // 1. insert()
+    students.insert({1, "MOHAN"});
+    students.insert({2, "Rahul"});
+    students.insert({3, "Amit"});
+
+    // 2. size()
+    cout << "Size of map: " << students.size() << endl;
+
+    // 3. empty()
+    if(students.empty())
+        cout << "Map is empty" << endl;
+    else
+        cout << "Map is not empty" << endl;
+
+    // 4. count()
+    cout << "Count of key 2: " << students.count(2) << endl; // returns 1 if exists, else 0
+    cout << "Count of key 5: " << students.count(5) << endl;
+
+    // 5. find()
+    auto it = students.find(3);
+    if(it != students.end())
+        cout << "Found key 3 -> " << it->second << endl;
+    else
+        cout << "Key 3 not found" << endl;
+
+    // 6. erase()
+    students.erase(2); // remove key 2
+
+    // Print all elements
+    cout << "\nCurrent map elements:\n";
+    for(auto p : students) {
+        cout << p.first << " -> " << p.second << endl;
+    }
+
+    // 7. clear()
+    students.clear();
+    cout << "\nAfter clear, size: " << students.size() << endl;
+
+    return 0;
+}
 
