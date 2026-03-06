@@ -44,14 +44,14 @@
 
 ////////////////////////////////
 //ERASE
-// #include <iostream>
-// #include <vector>
-// using namespace std;
+#include <iostream>
+#include <vector>
+using namespace std;
 
-// int main() {
-//     vector<int> v = {10, 20, 30, 40, 50};
-//     v.erase(v.begin() + 2); // removes element at index 2 (30)
+int main() {
+    vector<int> v = {10, 20, 30, 40, 50};
+    v.erase(v.begin() + 2); // removes element at index 2 (30)
 
-//     for(int x : v) cout << x << " ";
-// }
+    for(int x : v) cout << x << " ";
+}
 
