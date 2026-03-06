@@ -42,17 +42,41 @@ size()	Number of elements*/
 
 ///////////////////////////////////////////
 
+// #include <iostream>
+// #include <queue>
+// using namespace std;
+
+// int main() {
+//     priority_queue<pair<int,int>> pq;
+
+//     pq.push({2, 100});
+//     pq.push({1, 200});
+//     pq.push({3, 50});
+
+//     cout << "Top pair: " << pq.top().first << " " << pq.top().second << endl;
+// }
+
+/////////////////////////////////////////
+
+
 #include <iostream>
 #include <queue>
+#include <vector>
 using namespace std;
 
 int main() {
-    priority_queue<pair<int,int>> pq;
+    // Min-heap
+    priority_queue<int, vector<int>, greater<int>> pq;
 
-    pq.push({2, 100});
-    pq.push({1, 200});
-    pq.push({3, 50});
+    pq.push(40);
+    pq.push(10);
+    pq.push(30);
+    pq.push(20);
 
-    cout << "Top pair: " << pq.top().first << " " << pq.top().second << endl;
+    cout << "Elements in ascending order: ";
+    while(!pq.empty()) {
+        cout << pq.top() << " "; // smallest element at top
+        pq.pop();
+    }
+    return 0;
 }
-
