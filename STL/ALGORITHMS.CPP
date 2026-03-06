@@ -133,16 +133,36 @@
 // }
 
 ////////////////////////////////////
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
+//REVERSE
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
 
-int main() {
-    vector<int> v = {1, 2, 3, 4, 5};
+// int main() {
+//     vector<int> v = {1, 2, 3, 4, 5};
 
-    reverse(v.begin(), v.end());
+//     reverse(v.begin(), v.end());
 
-    cout << "Reversed vector: ";
-    for(int x : v) cout << x << " ";
-}
+//     cout << "Reversed vector: ";
+//     for(int x : v) cout << x << " ";
+// }
+
+////////////////////////////////////////////
+//NEXT PERMUTATION
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {1, 2, 3};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+
+//     // Generate next permutation
+//     if(next_permutation(arr, arr+n)) {
+//         cout << "Next permutation: ";
+//         for(int i=0; i<n; i++) cout << arr[i] << " ";
+//     } else {
+//         cout << "No next permutation, array reset to smallest.";
+//     }
+// }
