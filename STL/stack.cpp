@@ -65,4 +65,33 @@ size()	Number of elements*/
 //     }
 //     return 0;
 // }
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int> s1, s2;
+
+    // Fill s1
+    s1.push(10);
+    s1.push(20);
+
+    // Fill s2
+    s2.push(100);
+    s2.push(200);
+    s2.push(300);
+
+    cout << "Before swap:" << endl;
+    cout << "s1 top: " << s1.top() << endl; // 20
+    cout << "s2 top: " << s2.top() << endl; // 300
+
+    // Swap contents
+    s1.swap(s2);
+
+    cout << "\nAfter swap:" << endl;
+    cout << "s1 top: " << s1.top() << endl; // 300
+    cout << "s2 top: " << s2.top() << endl; // 20
+}
 
