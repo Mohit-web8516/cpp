@@ -175,18 +175,18 @@ Average time complexity for operations is O(1) (but worst case O(n)).*/
 
 
 ///////////////////////////////////
-#include <iostream>
-#include <unordered_map>
-using namespace std;
+// #include <iostream>
+// #include <unordered_map>
+// using namespace std;
 
-int main() {
-    unordered_map<int, string> um;
+// int main() {
+//     unordered_map<int, string> um;
 
-    um[1] = "MOHAN";
-    um[2] = "Rahul";
-    um[3] = "Amit";
+//     um[1] = "MOHAN";
+//     um[2] = "Rahul";
+//     um[3] = "Amit";
 
-    for(auto p : um) {
-        cout << p.first << " -> " << p.second << endl;
-    }
-}
+//     for(auto p : um) {
+//         cout << p.first << " -> " << p.second << endl;
+//     }
+// }
