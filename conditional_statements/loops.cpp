@@ -96,14 +96,33 @@
 
 ///////////////////////////////
 //PRINT ODD NUMBERS UP TO 15
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int i = 1;
+//     while (i <= 15){
+//         if (i % 2 != 0){
+//             cout << i << endl;
+//         }
+//         i++; //always increment
+//     }
+// }
+
+
+///Sum of digits of a number
+
 #include <iostream>
 using namespace std;
 int main(){
-    int i = 1;
-    while (i <= 15){
-        if (i % 2 != 0){
-            cout << i << endl;
-        }
-        i++; //always increment
+    int n , sum = 0;
+    cout << "Enter your number : ";
+    cin >> n;
+
+    while (n > 0){
+        int digit = n % 10;
+        sum = sum + digit;
+        n = n / 10;
     }
+    cout << "Sum of digit = " << sum;
+    return 0;
 }
