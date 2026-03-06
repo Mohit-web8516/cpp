@@ -20,18 +20,37 @@ clear()	Remove all elements*/
 
 
 /////////////////////////////////////
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main() {
+//     map<int, string> students;
+
+//     students[1] = "raj";
+//     students[2] = "Rahul";
+//     students.insert({3, "Amit"});
+
+//     for(auto p : students) {
+//         cout << p.first << " -> " << p.second << endl;
+//     }
+// }
+
+
+//////////////////////////////
 #include <iostream>
 #include <map>
 using namespace std;
 
 int main() {
-    map<int, string> students;
+    map<int, string> students = {{1,"john"}, {2,"Rahul"}, {3,"Amit"}};
 
-    students[1] = "raj";
-    students[2] = "Rahul";
-    students.insert({3, "Amit"});
-
-    for(auto p : students) {
-        cout << p.first << " -> " << p.second << endl;
+    auto it = students.find(2);
+    if(it != students.end()) {
+        cout << "Found: " << it->second << endl;
+        students.erase(it); // remove key 2
     }
+
+    for(auto p : students) cout << p.first << " -> " << p.second << endl;
 }
+
