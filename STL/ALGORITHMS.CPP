@@ -50,43 +50,64 @@
 
 //////////////////////////////////////////////////
 
+// #include <iostream>
+// #include <algorithm> // for sort()
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     // ------------------ Sorting an Array ------------------
+//     int arr[] = {50, 20, 40, 10, 30};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+
+//     // Sort array in ascending order
+//     sort(arr, arr+n);
+//     cout << "Array sorted in ascending order: ";
+//     for(int i=0; i<n; i++) cout << arr[i] << " ";
+//     cout << endl;
+
+//     // Sort array in descending order
+//     sort(arr, arr+n, greater<int>());
+//     cout << "Array sorted in descending order: ";
+//     for(int i=0; i<n; i++) cout << arr[i] << " ";
+//     cout << endl;
+
+//     // ------------------ Sorting a Vector ------------------
+//     vector<int> v = {9, 4, 7, 1, 3, 6};
+
+//     // Sort vector in ascending order
+//     sort(v.begin(), v.end());
+//     cout << "Vector sorted in ascending order: ";
+//     for(int x : v) cout << x << " ";
+//     cout << endl;
+
+//     // Sort vector in descending order
+//     sort(v.begin(), v.end(), greater<int>());
+//     cout << "Vector sorted in descending order: ";
+//     for(int x : v) cout << x << " ";
+//     cout << endl;
+
+//     return 0;
+// }
+
+
+////////////////////////////////////////////
 #include <iostream>
-#include <algorithm> // for sort()
+#include <algorithm>
 #include <vector>
 using namespace std;
 
+// Comparator function
+bool compareDesc(int a, int b) {
+    return a > b; // true if a should come before b
+}
+
 int main() {
-    // ------------------ Sorting an Array ------------------
-    int arr[] = {50, 20, 40, 10, 30};
-    int n = sizeof(arr)/sizeof(arr[0]);
+    vector<int> v = {5, 2, 8, 1, 3};
 
-    // Sort array in ascending order
-    sort(arr, arr+n);
-    cout << "Array sorted in ascending order: ";
-    for(int i=0; i<n; i++) cout << arr[i] << " ";
-    cout << endl;
+    sort(v.begin(), v.end(), compareDesc);
 
-    // Sort array in descending order
-    sort(arr, arr+n, greater<int>());
-    cout << "Array sorted in descending order: ";
-    for(int i=0; i<n; i++) cout << arr[i] << " ";
-    cout << endl;
-
-    // ------------------ Sorting a Vector ------------------
-    vector<int> v = {9, 4, 7, 1, 3, 6};
-
-    // Sort vector in ascending order
-    sort(v.begin(), v.end());
-    cout << "Vector sorted in ascending order: ";
+    cout << "Sorted in descending order: ";
     for(int x : v) cout << x << " ";
-    cout << endl;
-
-    // Sort vector in descending order
-    sort(v.begin(), v.end(), greater<int>());
-    cout << "Vector sorted in descending order: ";
-    for(int x : v) cout << x << " ";
-    cout << endl;
-
-    return 0;
 }
 
