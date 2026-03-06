@@ -1,51 +1,92 @@
 //SORTING
 
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {50, 20, 40, 10, 30};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+
+//     // 1. sort()
+//     sort(arr, arr+n);
+//     cout << "Sorted array: ";
+//     for(int x : arr) cout << x << " ";
+//     cout << endl;
+
+//     // 2. sort with comparator (descending)
+//     sort(arr, arr+n, greater<int>());
+//     cout << "Descending order: ";
+//     for(int x : arr) cout << x << " ";
+//     cout << endl;
+
+//     // 3. stable_sort()
+//     vector<pair<int,int>> v = {{1,2}, {2,2}, {1,1}};
+//     stable_sort(v.begin(), v.end(), [](auto &a, auto &b){
+//         return a.second < b.second;
+//     });
+//     cout << "Stable sort by second: ";
+//     for(auto &p : v) cout << "(" << p.first << "," << p.second << ") ";
+//     cout << endl;
+
+//     // 4. partial_sort()
+//     vector<int> nums = {9, 4, 7, 1, 3, 6};
+//     partial_sort(nums.begin(), nums.begin()+3, nums.end());
+//     cout << "Top 3 smallest: ";
+//     for(int i=0; i<3; i++) cout << nums[i] << " ";
+//     cout << endl;
+
+//     // 5. nth_element()
+//     vector<int> data = {7, 2, 1, 6, 8, 5, 3, 4};
+//     nth_element(data.begin(), data.begin()+4, data.end());
+//     cout << "5th smallest element: " << data[4] << endl;
+
+//     // 6. is_sorted()
+//     cout << "Is array sorted? " << (is_sorted(arr, arr+n) ? "Yes" : "No") << endl;
+
+//     return 0;
+// }
+
+//////////////////////////////////////////////////
+
 #include <iostream>
-#include <algorithm>
+#include <algorithm> // for sort()
 #include <vector>
 using namespace std;
 
 int main() {
+    // ------------------ Sorting an Array ------------------
     int arr[] = {50, 20, 40, 10, 30};
     int n = sizeof(arr)/sizeof(arr[0]);
 
-    // 1. sort()
+    // Sort array in ascending order
     sort(arr, arr+n);
-    cout << "Sorted array: ";
-    for(int x : arr) cout << x << " ";
+    cout << "Array sorted in ascending order: ";
+    for(int i=0; i<n; i++) cout << arr[i] << " ";
     cout << endl;
 
-    // 2. sort with comparator (descending)
+    // Sort array in descending order
     sort(arr, arr+n, greater<int>());
-    cout << "Descending order: ";
-    for(int x : arr) cout << x << " ";
+    cout << "Array sorted in descending order: ";
+    for(int i=0; i<n; i++) cout << arr[i] << " ";
     cout << endl;
 
-    // 3. stable_sort()
-    vector<pair<int,int>> v = {{1,2}, {2,2}, {1,1}};
-    stable_sort(v.begin(), v.end(), [](auto &a, auto &b){
-        return a.second < b.second;
-    });
-    cout << "Stable sort by second: ";
-    for(auto &p : v) cout << "(" << p.first << "," << p.second << ") ";
+    // ------------------ Sorting a Vector ------------------
+    vector<int> v = {9, 4, 7, 1, 3, 6};
+
+    // Sort vector in ascending order
+    sort(v.begin(), v.end());
+    cout << "Vector sorted in ascending order: ";
+    for(int x : v) cout << x << " ";
     cout << endl;
 
-    // 4. partial_sort()
-    vector<int> nums = {9, 4, 7, 1, 3, 6};
-    partial_sort(nums.begin(), nums.begin()+3, nums.end());
-    cout << "Top 3 smallest: ";
-    for(int i=0; i<3; i++) cout << nums[i] << " ";
+    // Sort vector in descending order
+    sort(v.begin(), v.end(), greater<int>());
+    cout << "Vector sorted in descending order: ";
+    for(int x : v) cout << x << " ";
     cout << endl;
-
-    // 5. nth_element()
-    vector<int> data = {7, 2, 1, 6, 8, 5, 3, 4};
-    nth_element(data.begin(), data.begin()+4, data.end());
-    cout << "5th smallest element: " << data[4] << endl;
-
-    // 6. is_sorted()
-    cout << "Is array sorted? " << (is_sorted(arr, arr+n) ? "Yes" : "No") << endl;
 
     return 0;
 }
-
 
