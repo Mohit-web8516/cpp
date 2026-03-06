@@ -29,17 +29,40 @@ size()	Number of elements*/
 
 ///////////////////////////////////////
 ////////////////////////////////////////
-#include <iostream>
-#include <stack>
-using namespace std;
+// #include <iostream>
+// #include <stack>
+// using namespace std;
 
-int main() {
-    stack<string> s;
+// int main() {
+//     stack<string> s;
 
-    if(s.empty()) cout << "Stack is empty\n";
+//     if(s.empty()) cout << "Stack is empty\n";
 
-    s.push("Mohit");
-    s.push("Rahul");
+//     s.push("johnt");
+//     s.push("Rahul");
 
-    cout << "Top: " << s.top() << endl; // Rahul
-}
+//     cout << "Top: " << s.top() << endl; // Rahul
+// }
+
+/////////////////////////////////////
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+
+// int main() {
+//     stack<int> s;
+
+//     // Push elements
+//     s.push(10);
+//     s.push(20);
+//     s.push(30);
+
+//     // Process using while loop
+//     cout << "Stack elements (top to bottom): ";
+//     while(!s.empty()) {
+//         cout << s.top() << " ";  // access top
+//         s.pop();                 // remove top
+//     }
+//     return 0;
+// }
+
