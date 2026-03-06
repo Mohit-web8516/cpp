@@ -111,23 +111,38 @@
 //     for(int x : v) cout << x << " ";
 // }
 
-/////////////////////////////////////////////
+// /////////////////////////////////////////////
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// bool cmp(pair<int,int> a, pair<int,int> b)
+// {
+//     return a.second < b.second;
+// }
+
+// int main()
+// {
+//     vector<pair<int,int>> v = {{1,5},{2,3},{4,1}};
+
+//     sort(v.begin(), v.end(), cmp);
+
+//     for(auto i : v)
+//         cout<<i.first<<" "<<i.second<<endl;
+// }
+
+////////////////////////////////////
 #include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
-bool cmp(pair<int,int> a, pair<int,int> b)
-{
-    return a.second < b.second;
-}
+int main() {
+    vector<int> v = {1, 2, 3, 4, 5};
 
-int main()
-{
-    vector<pair<int,int>> v = {{1,5},{2,3},{4,1}};
+    reverse(v.begin(), v.end());
 
-    sort(v.begin(), v.end(), cmp);
-
-    for(auto i : v)
-        cout<<i.first<<" "<<i.second<<endl;
+    cout << "Reversed vector: ";
+    for(int x : v) cout << x << " ";
 }
