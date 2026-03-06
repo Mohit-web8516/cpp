@@ -103,7 +103,7 @@ int main(){
     while (i <= 15){
         if (i % 2 != 0){
             cout << i << endl;
-            i++;
         }
+        i++; //always increment
     }
 }
