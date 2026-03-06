@@ -70,13 +70,13 @@ empty()  =======	Checks if vector is empty
 //     cout << vec.capacity() << endl; // 4
 
 
-//     for (int val : vec){
-//         cout << val << " ";
-//     }
-//     cout << endl;
-//     cout << "val at idx 2 : " << vec[2] << " or : " << vec.at(2) 
-//      << endl; ///to find the value using index
-//     cout << "Front : " << vec.front() << endl;
-//     cout << "Back : " << vec.back() << endl;
-//     return 0;
-// }
+    for (int val : vec){
+        cout << val << " ";
+    }
+    cout << endl;
+    cout << "val at idx 2 : " << vec[2] << " or : " << vec.at(2) 
+     << endl; ///to find the value using index
+    cout << "Front : " << vec.front() << endl;
+    cout << "Back : " << vec.back() << endl;
+    return 0;
+}
