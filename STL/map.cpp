@@ -38,19 +38,39 @@ clear()	Remove all elements*/
 
 
 //////////////////////////////
-#include <iostream>
-#include <map>
-using namespace std;
+// #include <iostream>
+// #include <map>
+// using namespace std;
 
-int main() {
-    map<int, string> students = {{1,"john"}, {2,"Rahul"}, {3,"Amit"}};
+// int main() {
+//     map<int, string> students = {{1,"john"}, {2,"Rahul"}, {3,"Amit"}};
 
-    auto it = students.find(2);
-    if(it != students.end()) {
-        cout << "Found: " << it->second << endl;
-        students.erase(it); // remove key 2
-    }
+//     auto it = students.find(2);
+//     if(it != students.end()) {
+//         cout << "Found: " << it->second << endl;
+//         students.erase(it); // remove key 2
+//     }
 
-    for(auto p : students) cout << p.first << " -> " << p.second << endl;
-}
+//     for(auto p : students) cout << p.first << " -> " << p.second << endl;
+// }
+
+
+
+////////////////////////////////////
+//////////////////////////////////
+// #include <iostream>
+// #include <map>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> arr = {1,2,2,3,3,3};
+//     map<int,int> freq;
+
+//     for(int x : arr) freq[x]++;
+
+//     for(auto p : freq) {
+//         cout << p.first << " occurs " << p.second << " times\n";
+//     }
+// }
 
