@@ -200,23 +200,23 @@
 // }
 ///////////////////////////////////////////////
 //MAX
-#include <iostream>
-#include <algorithm> // for max
-using namespace std;
-
-int main() {
-    int x = 15, y = 25;
-    cout << "Maximum is: " << max(x, y) << endl;
-}
-
-
-///////////////////////////////////////////
-//MIN
 // #include <iostream>
-// #include <algorithm> // for min
+// #include <algorithm> // for max
 // using namespace std;
 
 // int main() {
 //     int x = 15, y = 25;
-//     cout << "Minimum is: " << min(x, y) << endl;
+//     cout << "Maximum is: " << max(x, y) << endl;
 // }
+
+
+///////////////////////////////////////////
+//MIN
+#include <iostream>
+#include <algorithm> // for min
+using namespace std;
+
+int main() {
+    int x = 15, y = 25;
+    cout << "Minimum is: " << min(x, y) << endl;
+}
