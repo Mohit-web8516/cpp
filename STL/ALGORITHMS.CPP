@@ -170,18 +170,53 @@
 
 /////////////////////////////////////
 //prev_permutatio
-#include <iostream>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
 
-int main() {
-    int arr[] = {1, 3, 2};
-    int n = sizeof(arr)/sizeof(arr[0]);
+// int main() {
+//     int arr[] = {1, 3, 2};
+//     int n = sizeof(arr)/sizeof(arr[0]);
 
-    if(prev_permutation(arr, arr+n)) {
-        cout << "Previous permutation: ";
-        for(int i=0; i<n; i++) cout << arr[i] << " ";
-    } else {
-        cout << "No previous permutation, array reset to largest.";
-    }
+//     if(prev_permutation(arr, arr+n)) {
+//         cout << "Previous permutation: ";
+//         for(int i=0; i<n; i++) cout << arr[i] << " ";
+//     } else {
+//         cout << "No previous permutation, array reset to largest.";
+//     }
+// }
+
+
+///////////////////////////////////////
+//SWAP
+// #include <iostream>
+// #include <algorithm> // for swap
+// using namespace std;
+
+// int main() {
+//     int a = 10, b = 20;
+//     swap(a, b);
+//     cout << "After swap: a = " << a << ", b = " << b << endl;
 }
+///////////////////////////////////////////////
+//MAX
+// #include <iostream>
+// #include <algorithm> // for max
+// using namespace std;
+
+// int main() {
+//     int x = 15, y = 25;
+//     cout << "Maximum is: " << max(x, y) << endl;
+// }
+
+
+///////////////////////////////////////////
+//MIN
+// #include <iostream>
+// #include <algorithm> // for min
+// using namespace std;
+
+// int main() {
+//     int x = 15, y = 25;
+//     cout << "Minimum is: " << min(x, y) << endl;
+// }
