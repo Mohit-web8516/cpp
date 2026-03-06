@@ -224,20 +224,39 @@
 
 /////////////////////////////////////
 //BINARY SEARCH
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> v = {5, 10, 15, 20, 25};
+
+//     int target = 18;
+
+//     if(binary_search(v.begin(), v.end(), target))
+//         cout << target << " found in vector" << endl;
+//     else
+//         cout << target << " not found in vector" << endl;
+
+//     return 0;
+// }
+
+
+//////////////////////////////////////
+//COUNT SET BITS
 #include <iostream>
-#include <algorithm>
-#include <vector>
 using namespace std;
 
 int main() {
-    vector<int> v = {5, 10, 15, 20, 25};
+    int a = 13;
+    long b = 15;
+    long long c = 123456789;
 
-    int target = 18;
-
-    if(binary_search(v.begin(), v.end(), target))
-        cout << target << " found in vector" << endl;
-    else
-        cout << target << " not found in vector" << endl;
+    cout << "Set bits in int (13): " << __builtin_popcount(a) << endl;
+    cout << "Set bits in long (15): " << __builtin_popcountl(b) << endl;
+    cout << "Set bits in long long (123456789): " << __builtin_popcountll(c) << endl;
 
     return 0;
 }
+
