@@ -32,3 +32,36 @@ empty() == Check if deque is empty	*/
 
 
 ///////////////////////////////////////
+// #include <iostream>
+// #include <deque>
+// using namespace std;
+
+// int main() {
+//     deque<int> dq;
+
+//     dq.push_back(10);   // [10]
+//     dq.push_front(5);   // [5, 10]
+//     dq.push_back(20);   // [5, 10, 20]
+
+//     cout << "Deque elements: ";
+//     for(int n : dq) cout << n << " ";
+// }
+
+
+/////////////////////////////////////////
+#include <iostream>
+#include <deque>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    deque<int> dq = {40, 10, 30, 20};
+
+    sort(dq.begin(), dq.end()); // sort ascending
+
+    cout << "Sorted deque: ";
+    for(int n : dq) cout << n << " " << endl;
+
+    cout << "***" << endl ;
+    cout << dq[2] ; //30
+}
