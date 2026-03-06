@@ -212,11 +212,32 @@
 
 ///////////////////////////////////////////
 //MIN
+// #include <iostream>
+// #include <algorithm> // for min
+// using namespace std;
+
+// int main() {
+//     int x = 15, y = 25;
+//     cout << "Minimum is: " << min(x, y) << endl;
+// }
+
+
+/////////////////////////////////////
+//BINARY SEARCH
 #include <iostream>
-#include <algorithm> // for min
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main() {
-    int x = 15, y = 25;
-    cout << "Minimum is: " << min(x, y) << endl;
+    vector<int> v = {5, 10, 15, 20, 25};
+
+    int target = 18;
+
+    if(binary_search(v.begin(), v.end(), target))
+        cout << target << " found in vector" << endl;
+    else
+        cout << target << " not found in vector" << endl;
+
+    return 0;
 }
