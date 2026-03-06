@@ -138,18 +138,55 @@ Internally implemented as a balanced BST (Red-Black Tree).
 
 Operations (insert, find, erase) are O(log n).*/
 
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main() {
+//     multimap<int, string> mm;
+
+//     mm.insert({1, "MOHAN"});
+//     mm.insert({2, "Rahul"});
+//     mm.insert({1, "Amit"}); // duplicate key allowed
+
+//     for(auto p : mm) {
+//         cout << p.first << " -> " << p.second << endl;
+//     }
+// }
+
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+/*unordered_map
+Stores key-value pairs like map.
+
+Keys must be unique (like map).
+
+Keys are stored in no particular order.
+
+Internally implemented as a hash table.
+
+Average time complexity for operations is O(1) (but worst case O(n)).*/
+
+
+///////////////////////////////////
 #include <iostream>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 int main() {
-    multimap<int, string> mm;
+    unordered_map<int, string> um;
 
-    mm.insert({1, "MOHAN"});
-    mm.insert({2, "Rahul"});
-    mm.insert({1, "Amit"}); // duplicate key allowed
+    um[1] = "MOHAN";
+    um[2] = "Rahul";
+    um[3] = "Amit";
 
-    for(auto p : mm) {
+    for(auto p : um) {
         cout << p.first << " -> " << p.second << endl;
     }
 }
