@@ -166,3 +166,22 @@
 //         cout << "No next permutation, array reset to smallest.";
 //     }
 // }
+
+
+/////////////////////////////////////
+//prev_permutatio
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int arr[] = {1, 3, 2};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    if(prev_permutation(arr, arr+n)) {
+        cout << "Previous permutation: ";
+        for(int i=0; i<n; i++) cout << arr[i] << " ";
+    } else {
+        cout << "No previous permutation, array reset to largest.";
+    }
+}
