@@ -92,22 +92,42 @@
 
 
 ////////////////////////////////////////////
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// // Comparator function
+// bool compareDesc(int a, int b) {
+//     return a > b; // true if a should come before b
+// }
+
+// int main() {
+//     vector<int> v = {5, 2, 8, 1, 3};
+
+//     sort(v.begin(), v.end(), compareDesc);
+
+//     cout << "Sorted in descending order: ";
+//     for(int x : v) cout << x << " ";
+// }
+
+/////////////////////////////////////////////
 #include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
-// Comparator function
-bool compareDesc(int a, int b) {
-    return a > b; // true if a should come before b
+bool cmp(pair<int,int> a, pair<int,int> b)
+{
+    return a.second < b.second;
 }
 
-int main() {
-    vector<int> v = {5, 2, 8, 1, 3};
+int main()
+{
+    vector<pair<int,int>> v = {{1,5},{2,3},{4,1}};
 
-    sort(v.begin(), v.end(), compareDesc);
+    sort(v.begin(), v.end(), cmp);
 
-    cout << "Sorted in descending order: ";
-    for(int x : v) cout << x << " ";
+    for(auto i : v)
+        cout<<i.first<<" "<<i.second<<endl;
 }
-
