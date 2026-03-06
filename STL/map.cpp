@@ -145,7 +145,7 @@ using namespace std;
 int main() {
     multimap<int, string> mm;
 
-    mm.insert({1, "Mohit"});
+    mm.insert({1, "MOHAN"});
     mm.insert({2, "Rahul"});
     mm.insert({1, "Amit"}); // duplicate key allowed
 
