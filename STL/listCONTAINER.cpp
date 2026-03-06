@@ -35,3 +35,19 @@ empty()===========	Check if list is empty
 //     for(int n : myList) 
 //     cout << n << " ";
 // }
+
+
+//////////////////////////////////////////
+
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main() {
+    list<int> myList = {40, 10, 30, 20};
+
+    myList.sort();     // sort ascending
+    myList.reverse();  // reverse order
+
+    for(int n : myList) cout << n << " ";
+}
