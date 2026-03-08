@@ -94,17 +94,32 @@
 
 // Queue
 
+// #include <iostream>
+// #include <queue>
+// using namespace std;
+
+// int main() {
+//     queue<int> q;
+//     q.push(1);
+//     q.push(2);
+//     q.push(3);
+
+//     cout << "Front: " << q.front() << "\n";
+//     q.pop();
+//     cout << "New Front: " << q.front();
+// }
+
+//Priority Queue (Heap)
+
 #include <iostream>
 #include <queue>
 using namespace std;
 
 int main() {
-    queue<int> q;
-    q.push(1);
-    q.push(2);
-    q.push(3);
+    priority_queue<int> pq; // max-heap
+    pq.push(10);
+    pq.push(5);
+    pq.push(20);
 
-    cout << "Front: " << q.front() << "\n";
-    q.pop();
-    cout << "New Front: " << q.front();
+    cout << "Top: " << pq.top(); // largest element
 }
