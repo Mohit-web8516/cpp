@@ -127,17 +127,47 @@
 
 //Algorithms
 
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> v = {4, 2, 5, 1, 3};
+//     sort(v.begin(), v.end()); // ascending
+
+//     reverse(v.begin(), v.end()); // descending
+
+//     cout << "Sorted & reversed: ";
+//     for(int x : v) cout << x << " ";
+// }
+
+//////////////////////////////////////////
+/////////////////////////////////////////////
+
+//vector
+
 #include <iostream>
-#include <algorithm>
 #include <vector>
 using namespace std;
 
 int main() {
-    vector<int> v = {4, 2, 5, 1, 3};
-    sort(v.begin(), v.end()); // ascending
+    vector<int> v;
 
-    reverse(v.begin(), v.end()); // descending
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);
 
-    cout << "Sorted & reversed: ";
+    cout << "Front: " << v.front() << "\n";
+    cout << "Back: " << v.back() << "\n";
+    cout << "At(1): " << v.at(1) << "\n";
+
+    v.insert(v.begin()+1, 15); // insert at index 1
+    v.erase(v.begin()+2);      // erase element at index 2
+
+    cout << "Size: " << v.size() << " Capacity: " << v.capacity() << "\n";
+
     for(int x : v) cout << x << " ";
+    v.clear();
+    cout << "\nAfter clear, size: " << v.size();
 }
