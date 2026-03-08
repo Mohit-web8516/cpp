@@ -111,15 +111,33 @@
 
 //Priority Queue (Heap)
 
+// #include <iostream>
+// #include <queue>
+// using namespace std;
+
+// int main() {
+//     priority_queue<int> pq; // max-heap
+//     pq.push(10);
+//     pq.push(5);
+//     pq.push(20);
+
+//     cout << "Top: " << pq.top(); // largest element
+// }
+
+
+//Algorithms
+
 #include <iostream>
-#include <queue>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main() {
-    priority_queue<int> pq; // max-heap
-    pq.push(10);
-    pq.push(5);
-    pq.push(20);
+    vector<int> v = {4, 2, 5, 1, 3};
+    sort(v.begin(), v.end()); // ascending
 
-    cout << "Top: " << pq.top(); // largest element
+    reverse(v.begin(), v.end()); // descending
+
+    cout << "Sorted & reversed: ";
+    for(int x : v) cout << x << " ";
 }
