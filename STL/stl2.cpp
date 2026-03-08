@@ -177,15 +177,38 @@
 
 //pair
 
+// #include <iostream>
+// #include <utility>
+// using namespace std;
+
+// int main() {
+//     pair<int, string> p = make_pair(1, "John");
+//     cout << p.first << " " << p.second << "\n";
+
+//     pair<int, pair<int,string>> nested = {2, {22, "Data"}};
+//     cout << nested.first << " " << nested.second.first << " " << nested.second.second;
+// }
+
+//////////////////////////////////////////
+//set
+
 #include <iostream>
-#include <utility>
+#include <set>
 using namespace std;
 
 int main() {
-    pair<int, string> p = make_pair(1, "John");
-    cout << p.first << " " << p.second << "\n";
+    set<int> s;
+    s.insert(5);
+    s.insert(1);
+    s.insert(3);
 
-    pair<int, pair<int,string>> nested = {2, {22, "Data"}};
-    cout << nested.first << " " << nested.second.first << " " << nested.second.second;
+    cout << "Count(3): " << s.count(3) << "\n";
+    auto it = s.find(1);
+    if(it != s.end()) cout << "Found: " << *it << "\n";
+
+    s.erase(3);
+    for(int x : s) cout << x << " ";
+    cout << "\nSize: " << s.size();
+    s.clear();
+    cout << "\nAfter clear, size: " << s.size();
 }
-
