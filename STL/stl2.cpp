@@ -17,11 +17,28 @@
 
 //Pair
 
+// #include <iostream>
+// #include <utility>
+// using namespace std;
+
+// int main() {
+//     pair<int, string> p = {1, "john"};
+//     cout << p.first << " " << p.second;
+// }
+
+
+//set
+
+
+
 #include <iostream>
-#include <utility>
+#include <set>
 using namespace std;
 
 int main() {
-    pair<int, string> p = {1, "john"};
-    cout << p.first << " " << p.second;
+    set<int> s = {5, 1, 2, 2, 3};
+    s.insert(4);
+
+    cout << "Set elements: ";
+    for(int x : s) cout << x << " ";
 }
