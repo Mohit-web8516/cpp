@@ -147,27 +147,45 @@
 
 //vector
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> v;
+
+//     v.push_back(10);
+//     v.push_back(20);
+//     v.push_back(30);
+
+//     cout << "Front: " << v.front() << "\n";
+//     cout << "Back: " << v.back() << "\n";
+//     cout << "At(1): " << v.at(1) << "\n";
+
+//     v.insert(v.begin()+1, 15); // insert at index 1
+//     v.erase(v.begin()+2);      // erase element at index 2
+
+//     cout << "Size: " << v.size() << " Capacity: " << v.capacity() << "\n";
+
+//     for(int x : v) cout << x << " ";
+//     v.clear();
+//     cout << "\nAfter clear, size: " << v.size();
+// }
+
+
+//////////////////////////////////
+
+//pair
+
 #include <iostream>
-#include <vector>
+#include <utility>
 using namespace std;
 
 int main() {
-    vector<int> v;
+    pair<int, string> p = make_pair(1, "John");
+    cout << p.first << " " << p.second << "\n";
 
-    v.push_back(10);
-    v.push_back(20);
-    v.push_back(30);
-
-    cout << "Front: " << v.front() << "\n";
-    cout << "Back: " << v.back() << "\n";
-    cout << "At(1): " << v.at(1) << "\n";
-
-    v.insert(v.begin()+1, 15); // insert at index 1
-    v.erase(v.begin()+2);      // erase element at index 2
-
-    cout << "Size: " << v.size() << " Capacity: " << v.capacity() << "\n";
-
-    for(int x : v) cout << x << " ";
-    v.clear();
-    cout << "\nAfter clear, size: " << v.size();
+    pair<int, pair<int,string>> nested = {2, {22, "Data"}};
+    cout << nested.first << " " << nested.second.first << " " << nested.second.second;
 }
+
