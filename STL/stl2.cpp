@@ -13,3 +13,15 @@
 //     for(int x : v) cout << x << " ";
 //     cout << "\nSize: " << v.size();
 // }
+
+
+//Pair
+
+#include <iostream>
+#include <utility>
+using namespace std;
+
+int main() {
+    pair<int, string> p = {1, "john"};
+    cout << p.first << " " << p.second;
+}
