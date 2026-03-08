@@ -219,22 +219,43 @@
 
 //Map
 
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main() {
+//     map<string,int> m;
+//     m["apple"] = 3;
+//     m.insert({"banana", 5});
+
+//     cout << "Count(apple): " << m.count("apple") << "\n";
+//     auto it = m.find("banana");
+//     if(it != m.end()) cout << "Found: " << it->first << " -> " << it->second << "\n";
+
+//     m.erase("apple");
+//     for(auto &p : m) cout << p.first << " " << p.second << "\n";
+//     cout << "Size: " << m.size();
+//     m.clear();
+//     cout << "\nAfter clear, size: " << m.size();
+// }
+
+
+///////////////////////////////////////////////
+//Unordered Map
+
 #include <iostream>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 int main() {
-    map<string,int> m;
-    m["apple"] = 3;
-    m.insert({"banana", 5});
+    unordered_map<int,string> um;
+    um[1] = "one";
+    um[2] = "two";
 
-    cout << "Count(apple): " << m.count("apple") << "\n";
-    auto it = m.find("banana");
-    if(it != m.end()) cout << "Found: " << it->first << " -> " << it->second << "\n";
+    cout << "Count(2): " << um.count(2) << "\n";
+    auto it = um.find(1);
+    if(it != um.end()) cout << "Found: " << it->first << " -> " << it->second << "\n";
 
-    m.erase("apple");
-    for(auto &p : m) cout << p.first << " " << p.second << "\n";
-    cout << "Size: " << m.size();
-    m.clear();
-    cout << "\nAfter clear, size: " << m.size();
+    um.erase(2);
+    for(auto &p : um) cout << p.first << " " << p.second << "\n";
 }
