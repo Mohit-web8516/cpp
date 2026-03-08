@@ -263,18 +263,39 @@
 /////////////////////////////////////
 
 //Stack
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+
+// int main() {
+//     stack<int> st;
+//     st.push(10);
+//     st.push(20);
+
+//     cout << "Top: " << st.top() << "\n";
+//     st.pop();
+//     cout << "New Top: " << st.top() << "\n";
+//     cout << "Size: " << st.size() << "\n";
+//     cout << "Empty? " << st.empty();
+// }
+
+
+/////////////////////////////////////////
+
+//Queue
+
 #include <iostream>
-#include <stack>
+#include <queue>
 using namespace std;
 
 int main() {
-    stack<int> st;
-    st.push(10);
-    st.push(20);
+    queue<int> q;
+    q.push(1);
+    q.push(2);
 
-    cout << "Top: " << st.top() << "\n";
-    st.pop();
-    cout << "New Top: " << st.top() << "\n";
-    cout << "Size: " << st.size() << "\n";
-    cout << "Empty? " << st.empty();
+    cout << "Front: " << q.front() << " Back: " << q.back() << "\n";
+    q.pop();
+    cout << "New Front: " << q.front() << "\n";
+    cout << "Size: " << q.size() << "\n";
+    cout << "Empty? " << q.empty();
 }
