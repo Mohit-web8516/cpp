@@ -192,23 +192,49 @@
 //////////////////////////////////////////
 //set
 
+// #include <iostream>
+// #include <set>
+// using namespace std;
+
+// int main() {
+//     set<int> s;
+//     s.insert(5);
+//     s.insert(1);
+//     s.insert(3);
+
+//     cout << "Count(3): " << s.count(3) << "\n";
+//     auto it = s.find(1);
+//     if(it != s.end()) cout << "Found: " << *it << "\n";
+
+//     s.erase(3);
+//     for(int x : s) cout << x << " ";
+//     cout << "\nSize: " << s.size();
+//     s.clear();
+//     cout << "\nAfter clear, size: " << s.size();
+// }
+
+
+////////////////////////////////////////////////
+
+
+//Map
+
 #include <iostream>
-#include <set>
+#include <map>
 using namespace std;
 
 int main() {
-    set<int> s;
-    s.insert(5);
-    s.insert(1);
-    s.insert(3);
+    map<string,int> m;
+    m["apple"] = 3;
+    m.insert({"banana", 5});
 
-    cout << "Count(3): " << s.count(3) << "\n";
-    auto it = s.find(1);
-    if(it != s.end()) cout << "Found: " << *it << "\n";
+    cout << "Count(apple): " << m.count("apple") << "\n";
+    auto it = m.find("banana");
+    if(it != m.end()) cout << "Found: " << it->first << " -> " << it->second << "\n";
 
-    s.erase(3);
-    for(int x : s) cout << x << " ";
-    cout << "\nSize: " << s.size();
-    s.clear();
-    cout << "\nAfter clear, size: " << s.size();
+    m.erase("apple");
+    for(auto &p : m) cout << p.first << " " << p.second << "\n";
+    cout << "Size: " << m.size();
+    m.clear();
+    cout << "\nAfter clear, size: " << m.size();
 }
