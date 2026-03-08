@@ -77,18 +77,34 @@
 
 //Stack
 
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+
+// int main() {
+//     stack<int> st;
+//     st.push(10);
+//     st.push(20);
+//     st.push(30);
+
+//     cout << "Top: " << st.top() << "\n";
+//     st.pop();
+//     cout << "New Top: " << st.top();
+// }
+
+// Queue
+
 #include <iostream>
-#include <stack>
+#include <queue>
 using namespace std;
 
 int main() {
-    stack<int> st;
-    st.push(10);
-    st.push(20);
-    st.push(30);
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
 
-    cout << "Top: " << st.top() << "\n";
-    st.pop();
-    cout << "New Top: " << st.top();
+    cout << "Front: " << q.front() << "\n";
+    q.pop();
+    cout << "New Front: " << q.front();
 }
-
