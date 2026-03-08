@@ -46,16 +46,33 @@
 
 //Maps
 
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main() {
+//     map<char, int> freq;
+//     string str = "raaammu";
+//     for(char c : str) freq[c]++;
+
+//     for(auto &p : freq)
+//         cout << p.first << " -> " << p.second << "\n";
+// }
+
+
+//Unordered Map
+
 #include <iostream>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 int main() {
-    map<char, int> freq;
-    string str = "raaammu";
-    for(char c : str) freq[c]++;
+    unordered_map<string, int> umap;
+    umap["apple"] = 3;
+    umap["banana"] = 5;
 
-    for(auto &p : freq)
+    for(auto &p : umap)
         cout << p.first << " -> " << p.second << "\n";
 }
+
 
