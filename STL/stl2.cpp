@@ -284,18 +284,43 @@
 
 //Queue
 
+// #include <iostream>
+// #include <queue>
+// using namespace std;
+
+// int main() {
+//     queue<int> q;
+//     q.push(1);
+//     q.push(2);
+
+//     cout << "Front: " << q.front() << " Back: " << q.back() << "\n";
+//     q.pop();
+//     cout << "New Front: " << q.front() << "\n";
+//     cout << "Size: " << q.size() << "\n";
+//     cout << "Empty? " << q.empty();
+// }
+
+
+
+///////////////////////////////////////
+
+//PRIORITY QUEUE
+
 #include <iostream>
 #include <queue>
 using namespace std;
 
 int main() {
-    queue<int> q;
-    q.push(1);
-    q.push(2);
+    priority_queue<int> pq; // max-heap
+    pq.push(10);
+    pq.push(5);
+    pq.push(20);
 
-    cout << "Front: " << q.front() << " Back: " << q.back() << "\n";
-    q.pop();
-    cout << "New Front: " << q.front() << "\n";
-    cout << "Size: " << q.size() << "\n";
-    cout << "Empty? " << q.empty();
+    cout << "Top: " << pq.top() << "\n";
+    pq.pop();
+    cout << "New Top: " << pq.top() << "\n";
+
+    cout << "Size: " << pq.size() << "\n";
+    cout << "Empty? " << pq.empty();
 }
+
