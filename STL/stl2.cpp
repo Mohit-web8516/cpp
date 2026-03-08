@@ -243,19 +243,38 @@
 ///////////////////////////////////////////////
 //Unordered Map
 
+// #include <iostream>
+// #include <unordered_map>
+// using namespace std;
+
+// int main() {
+//     unordered_map<int,string> um;
+//     um[1] = "one";
+//     um[2] = "two";
+
+//     cout << "Count(2): " << um.count(2) << "\n";
+//     auto it = um.find(1);
+//     if(it != um.end()) cout << "Found: " << it->first << " -> " << it->second << "\n";
+
+//     um.erase(2);
+//     for(auto &p : um) cout << p.first << " " << p.second << "\n";
+// }
+
+/////////////////////////////////////
+
+//Stack
 #include <iostream>
-#include <unordered_map>
+#include <stack>
 using namespace std;
 
 int main() {
-    unordered_map<int,string> um;
-    um[1] = "one";
-    um[2] = "two";
+    stack<int> st;
+    st.push(10);
+    st.push(20);
 
-    cout << "Count(2): " << um.count(2) << "\n";
-    auto it = um.find(1);
-    if(it != um.end()) cout << "Found: " << it->first << " -> " << it->second << "\n";
-
-    um.erase(2);
-    for(auto &p : um) cout << p.first << " " << p.second << "\n";
+    cout << "Top: " << st.top() << "\n";
+    st.pop();
+    cout << "New Top: " << st.top() << "\n";
+    cout << "Size: " << st.size() << "\n";
+    cout << "Empty? " << st.empty();
 }
