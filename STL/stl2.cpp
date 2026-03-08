@@ -306,21 +306,48 @@
 
 //PRIORITY QUEUE
 
+// #include <iostream>
+// #include <queue>
+// using namespace std;
+
+// int main() {
+//     priority_queue<int> pq; // max-heap
+//     pq.push(10);
+//     pq.push(5);
+//     pq.push(20);
+
+//     cout << "Top: " << pq.top() << "\n";
+//     pq.pop();
+//     cout << "New Top: " << pq.top() << "\n";
+
+//     cout << "Size: " << pq.size() << "\n";
+//     cout << "Empty? " << pq.empty();
+// }
+
+//////////////////////////////////////////
+
+//Algorithms
+
+
 #include <iostream>
-#include <queue>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main() {
-    priority_queue<int> pq; // max-heap
-    pq.push(10);
-    pq.push(5);
-    pq.push(20);
+    vector<int> v = {4, 2, 5, 1, 3};
 
-    cout << "Top: " << pq.top() << "\n";
-    pq.pop();
-    cout << "New Top: " << pq.top() << "\n";
+    sort(v.begin(), v.end());
+    reverse(v.begin(), v.end());
 
-    cout << "Size: " << pq.size() << "\n";
-    cout << "Empty? " << pq.empty();
+    cout << "Binary search for 3: " << binary_search(v.begin(), v.end(), 3) << "\n";
+
+    auto lb = lower_bound(v.begin(), v.end(), 3);
+    auto ub = upper_bound(v.begin(), v.end(), 3);
+
+    cout << "Lower bound of 3: " << (lb - v.begin()) << "\n";
+    cout << "Upper bound of 3: " << (ub - v.begin()) << "\n";
+
+    cout << "Max: " << *max_element(v.begin(), v.end()) << "\n";
+    cout << "Min: " << *min_element(v.begin(), v.end()) << "\n";
 }
-
