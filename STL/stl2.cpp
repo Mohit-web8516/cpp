@@ -31,14 +31,31 @@
 
 
 
+// #include <iostream>
+// #include <set>
+// using namespace std;
+
+// int main() {
+//     set<int> s = {5, 1, 2, 2, 3};
+//     s.insert(4);
+
+//     cout << "Set elements: ";
+//     for(int x : s) cout << x << " ";
+// }
+
+
+//Maps
+
 #include <iostream>
-#include <set>
+#include <map>
 using namespace std;
 
 int main() {
-    set<int> s = {5, 1, 2, 2, 3};
-    s.insert(4);
+    map<char, int> freq;
+    string str = "raaammu";
+    for(char c : str) freq[c]++;
 
-    cout << "Set elements: ";
-    for(int x : s) cout << x << " ";
+    for(auto &p : freq)
+        cout << p.first << " -> " << p.second << "\n";
 }
+
