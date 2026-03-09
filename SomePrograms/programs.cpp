@@ -80,15 +80,34 @@
 ///5. Sort and Remove Duplicates using Vector + Algorithm
 
 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main() {
+//     vector<int> v = {4,2,5,2,1,4};
+//     sort(v.begin(), v.end());
+//     v.erase(unique(v.begin(), v.end()), v.end());
+
+//     for(int x : v) cout << x << " ";
+// }
+
+
+//6. Priority Queue (Top-K Largest Elements)
+
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <queue>
 using namespace std;
 
 int main() {
-    vector<int> v = {4,2,5,2,1,4};
-    sort(v.begin(), v.end());
-    v.erase(unique(v.begin(), v.end()), v.end());
+    vector<int> nums = {10,4,7,20,15};
+    priority_queue<int> pq(nums.begin(), nums.end());
 
-    for(int x : v) cout << x << " ";
+    int k = 3;
+    cout << "Top " << k << " elements: ";
+    while(k-- && !pq.empty()) {
+        cout << pq.top() << " ";
+        pq.pop();
+    }
 }
