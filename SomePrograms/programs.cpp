@@ -116,16 +116,32 @@
 //7. Binary Search using STL
 
 
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> v = {1,3,5,7,9};
+//     int key = 5;
+//     if(binary_search(v.begin(), v.end(), key))
+//         cout << "Found " << key;
+//     else
+//         cout << "Not Found";
+// }
+
+
+//ROTATE ARRAY USING STL
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
 int main() {
-    vector<int> v = {1,3,5,7,9};
-    int key = 5;
-    if(binary_search(v.begin(), v.end(), key))
-        cout << "Found " << key;
-    else
-        cout << "Not Found";
+    vector<int> v = {1,2,3,4,5};
+    rotate(v.begin(), v.begin()+2, v.end()); // left rotate by 2
+
+    for(int x : v) cout << x << " ";
 }
+
