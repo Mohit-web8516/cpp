@@ -61,16 +61,34 @@
 
 //4. Find Duplicate Elements using Set
 
+// #include <iostream>
+// #include <set>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {1,2,3,2,4,1};
+//     set<int> s;
+//     cout << "Duplicates: ";
+//     for(int x : arr) {
+//         if(s.count(x)) cout << x << " ";
+//         else s.insert(x);
+//     }
+// }
+
+
+
+///5. Sort and Remove Duplicates using Vector + Algorithm
+
+
 #include <iostream>
-#include <set>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main() {
-    int arr[] = {1,2,3,2,4,1};
-    set<int> s;
-    cout << "Duplicates: ";
-    for(int x : arr) {
-        if(s.count(x)) cout << x << " ";
-        else s.insert(x);
-    }
+    vector<int> v = {4,2,5,2,1,4};
+    sort(v.begin(), v.end());
+    v.erase(unique(v.begin(), v.end()), v.end());
+
+    for(int x : v) cout << x << " ";
 }
