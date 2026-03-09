@@ -93,12 +93,23 @@
 //8. Sum of Digits (while loop)
 
 
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int num=987, sum=0;
+//     while(num>0){ sum+=num%10; num/=10; }
+//     cout<<"Sum of digits = "<<sum;
+// }
+
+//9. Range-Based For Loop Example
+
+
 #include <iostream>
+#include <vector>
 using namespace std;
 int main() {
-    int num=987, sum=0;
-    while(num>0){ sum+=num%10; num/=10; }
-    cout<<"Sum of digits = "<<sum;
+    vector<int> v={10,20,30,40};
+    for(int x:v) cout<<x<<" ";
 }
 
 
