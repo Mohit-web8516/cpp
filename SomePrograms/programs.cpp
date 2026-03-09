@@ -96,18 +96,36 @@
 
 //6. Priority Queue (Top-K Largest Elements)
 
+// #include <iostream>
+// #include <queue>
+// using namespace std;
+
+// int main() {
+//     vector<int> nums = {10,4,7,20,15};
+//     priority_queue<int> pq(nums.begin(), nums.end());
+
+//     int k = 3;
+//     cout << "Top " << k << " elements: ";
+//     while(k-- && !pq.empty()) {
+//         cout << pq.top() << " ";
+//         pq.pop();
+//     }
+// }
+
+
+//7. Binary Search using STL
+
+
 #include <iostream>
-#include <queue>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main() {
-    vector<int> nums = {10,4,7,20,15};
-    priority_queue<int> pq(nums.begin(), nums.end());
-
-    int k = 3;
-    cout << "Top " << k << " elements: ";
-    while(k-- && !pq.empty()) {
-        cout << pq.top() << " ";
-        pq.pop();
-    }
+    vector<int> v = {1,3,5,7,9};
+    int key = 5;
+    if(binary_search(v.begin(), v.end(), key))
+        cout << "Found " << key;
+    else
+        cout << "Not Found";
 }
