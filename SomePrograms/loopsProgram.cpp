@@ -79,14 +79,26 @@
 
 //7. Pattern Printing (nested for loop)
 
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int n=5;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=i;j++) cout<<"* ";
+//         cout<<"\n";
+//     }
+// }
+
+
+//8. Sum of Digits (while loop)
+
+
 #include <iostream>
 using namespace std;
 int main() {
-    int n=5;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=i;j++) cout<<"* ";
-        cout<<"\n";
-    }
+    int num=987, sum=0;
+    while(num>0){ sum+=num%10; num/=10; }
+    cout<<"Sum of digits = "<<sum;
 }
 
 
