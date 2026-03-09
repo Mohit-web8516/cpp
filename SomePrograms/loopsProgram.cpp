@@ -104,12 +104,29 @@
 //9. Range-Based For Loop Example
 
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main() {
+//     vector<int> v={10,20,30,40};
+//     for(int x:v) cout<<x<<" ";
+// }
+
+
+//10. Palindrome Check (do-while loop)
+
+
+
 #include <iostream>
-#include <vector>
 using namespace std;
 int main() {
-    vector<int> v={10,20,30,40};
-    for(int x:v) cout<<x<<" ";
+    int num=121, temp=num, rev=0;
+    do {
+        rev=rev*10+(temp%10);
+        temp/=10;
+    } while(temp>0);
+    cout<<(rev==num?"Palindrome":"Not Palindrome");
 }
+
 
 
