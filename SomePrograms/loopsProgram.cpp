@@ -49,15 +49,30 @@
 //5. Check Prime Number (while loop)
 
 
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int n=29, i=2;
+//     bool prime=true;
+//     while(i*i<=n){
+//         if(n%i==0){ prime=false; break; }
+//         i++;
+//     }
+//     cout<<(prime?"Prime":"Not Prime");
+// }
+
+
+//6. Fibonacci Series (for loop)
+
+
 #include <iostream>
 using namespace std;
 int main() {
-    int n=29, i=2;
-    bool prime=true;
-    while(i*i<=n){
-        if(n%i==0){ prime=false; break; }
-        i++;
+    int n=10, a=0, b=1;
+    cout<<a<<" "<<b<<" ";
+    for(int i=2;i<n;i++){
+        int c=a+b; cout<<c<<" ";
+        a=b; b=c;
     }
-    cout<<(prime?"Prime":"Not Prime");
 }
 
