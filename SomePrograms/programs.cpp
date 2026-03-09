@@ -45,14 +45,32 @@
 
 //3. Frequency Count using Map
 
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main() {
+//     string str = "programming";
+//     map<char,int> freq;
+//     for(char c : str) freq[c]++;
+
+//     for(auto &p : freq) cout << p.first << " -> " << p.second << "\n";
+// }
+
+
+
+//4. Find Duplicate Elements using Set
+
 #include <iostream>
-#include <map>
+#include <set>
 using namespace std;
 
 int main() {
-    string str = "programming";
-    map<char,int> freq;
-    for(char c : str) freq[c]++;
-
-    for(auto &p : freq) cout << p.first << " -> " << p.second << "\n";
+    int arr[] = {1,2,3,2,4,1};
+    set<int> s;
+    cout << "Duplicates: ";
+    for(int x : arr) {
+        if(s.count(x)) cout << x << " ";
+        else s.insert(x);
+    }
 }
