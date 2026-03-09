@@ -149,14 +149,34 @@
 
 //9..Next Permutation
 
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
 
-int main() {
-    vector<int> v = {1,2,3};
-    next_permutation(v.begin(), v.end());
-    for(int x : v) cout << x << " ";
-}
+// int main() {
+//     vector<int> v = {1,2,3};
+//     next_permutation(v.begin(), v.end());
+//     for(int x : v) cout << x << " ";
+// }
+
+
+//10..Find First Non-Repeating Character using Map
+
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main() {
+//     string str = "swiss";
+//     map<char,int> freq;
+//     for(char c : str) freq[c]++;
+
+//     for(char c : str) {
+//         if(freq[c]==1) {
+//             cout << "First non-repeating: " << c;
+//             break;
+//         }
+//     }
+// }
 
