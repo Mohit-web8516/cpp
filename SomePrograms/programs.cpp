@@ -131,7 +131,23 @@
 // }
 
 
-//ROTATE ARRAY USING STL
+//8..ROTATE ARRAY USING STL
+
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> v = {1,2,3,4,5};
+//     rotate(v.begin(), v.begin()+2, v.end()); // left rotate by 2
+
+//     for(int x : v) cout << x << " ";
+// }
+
+
+
+//9..Next Permutation
 
 #include <iostream>
 #include <algorithm>
@@ -139,9 +155,8 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {1,2,3,4,5};
-    rotate(v.begin(), v.begin()+2, v.end()); // left rotate by 2
-
+    vector<int> v = {1,2,3};
+    next_permutation(v.begin(), v.end());
     for(int x : v) cout << x << " ";
 }
 
