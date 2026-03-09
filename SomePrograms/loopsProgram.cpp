@@ -117,16 +117,16 @@
 
 
 
-#include <iostream>
-using namespace std;
-int main() {
-    int num=121, temp=num, rev=0;
-    do {
-        rev=rev*10+(temp%10);
-        temp/=10;
-    } while(temp>0);
-    cout<<(rev==num?"Palindrome":"Not Palindrome");
-}
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int num=121, temp=num, rev=0;
+//     do {
+//         rev=rev*10+(temp%10);
+//         temp/=10;
+//     } while(temp>0);
+//     cout<<(rev==num?"Palindrome":"Not Palindrome");
+// }
 
 
 
