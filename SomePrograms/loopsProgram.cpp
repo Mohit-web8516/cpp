@@ -65,14 +65,28 @@
 //6. Fibonacci Series (for loop)
 
 
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int n=10, a=0, b=1;
+//     cout<<a<<" "<<b<<" ";
+//     for(int i=2;i<n;i++){
+//         int c=a+b; cout<<c<<" ";
+//         a=b; b=c;
+//     }
+// }
+
+
+//7. Pattern Printing (nested for loop)
+
 #include <iostream>
 using namespace std;
 int main() {
-    int n=10, a=0, b=1;
-    cout<<a<<" "<<b<<" ";
-    for(int i=2;i<n;i++){
-        int c=a+b; cout<<c<<" ";
-        a=b; b=c;
+    int n=5;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++) cout<<"* ";
+        cout<<"\n";
     }
 }
+
 
