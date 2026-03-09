@@ -10,10 +10,25 @@
 
 //2. Factorial of a Number (while loop)
 
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int n=5, fact=1;
+//     while(n>0){ fact*=n; n--; }
+//     cout<<"Factorial = "<<fact;
+// }
+
+
+
+//3. Reverse a Number (do-while loop)
+
 #include <iostream>
 using namespace std;
 int main() {
-    int n=5, fact=1;
-    while(n>0){ fact*=n; n--; }
-    cout<<"Factorial = "<<fact;
+    int num=1234, rev=0;
+    do {
+        rev=rev*10+(num%10);
+        num/=10;
+    } while(num>0);
+    cout<<"Reversed = "<<rev;
 }
