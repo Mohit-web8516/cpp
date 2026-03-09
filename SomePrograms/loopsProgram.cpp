@@ -22,13 +22,42 @@
 
 //3. Reverse a Number (do-while loop)
 
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int num=1234, rev=0;
+//     do {
+//         rev=rev*10+(num%10);
+//         num/=10;
+//     } while(num>0);
+//     cout<<"Reversed = "<<rev;
+// }
+
+
+//4. Multiplication Table (for loop)
+
+
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int n=7;
+//     for(int i=1;i<=10;i++)
+//     cout<<n<<" x "<<i<<" = "<<n*i<<"\n";
+// }
+
+
+//5. Check Prime Number (while loop)
+
+
 #include <iostream>
 using namespace std;
 int main() {
-    int num=1234, rev=0;
-    do {
-        rev=rev*10+(num%10);
-        num/=10;
-    } while(num>0);
-    cout<<"Reversed = "<<rev;
+    int n=29, i=2;
+    bool prime=true;
+    while(i*i<=n){
+        if(n%i==0){ prime=false; break; }
+        i++;
+    }
+    cout<<(prime?"Prime":"Not Prime");
 }
+
