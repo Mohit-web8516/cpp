@@ -48,15 +48,37 @@
 
 //Count words in a file
 
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+
+// int main() {
+//     ifstream fin("example.txt");
+//     string word;
+//     int count=0;
+//     while(fin >> word) count++;
+//     fin.close();
+//     cout << "Total words: " << count;
+// }
+
+
+///////////////////////////////////////////////////
+///////COPY FILE CONTENT TO ANOTHER FILE
+
 #include <iostream>
 #include <fstream>
 using namespace std;
 
 int main() {
     ifstream fin("example.txt");
-    string word;
-    int count=0;
-    while(fin >> word) count++;
+    ofstream fout("copy.txt");
+
+    string line;
+    while(getline(fin, line)) {
+        fout << line << "\n";
+    }
+
     fin.close();
-    cout << "Total words: " << count;
+    fout.close();
+    cout << "File copied successfully.";
 }
