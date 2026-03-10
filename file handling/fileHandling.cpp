@@ -65,20 +65,36 @@
 ///////////////////////////////////////////////////
 ///////COPY FILE CONTENT TO ANOTHER FILE
 
-#include <iostream>
-#include <fstream>
-using namespace std;
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
 
-int main() {
-    ifstream fin("example.txt");
-    ofstream fout("copy.txt");
+// int main() {
+//     ifstream fin("example.txt");
+//     ofstream fout("copy.txt");
 
-    string line;
-    while(getline(fin, line)) {
-        fout << line << "\n";
-    }
+//     string line;
+//     while(getline(fin, line)) {
+//         fout << line << "\n";
+//     }
 
-    fin.close();
-    fout.close();
-    cout << "File copied successfully.";
-}
+//     fin.close();
+//     fout.close();
+//     cout << "File copied successfully.";
+// }
+
+
+////////////////////////////////////////////////
+
+//MINI PROJECT 
+/*Student Record System (File Handling Project)
+Features:
+Add new student record
+
+Display all records
+
+Search for a student by roll number
+
+Delete a student record
+
+Append new data*/
