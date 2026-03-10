@@ -33,14 +33,30 @@
 
 //Append Data to a file
 
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+
+// int main() {
+//     ofstream fout("example.txt", ios::app); // append mode
+//     fout << "\nThis line is appended.";
+//     fout.close();
+//     cout << "Data appended successfully.";
+// }
+
+////////////////////////////////////////
+
+//Count words in a file
+
 #include <iostream>
 #include <fstream>
 using namespace std;
 
 int main() {
-    ofstream fout("example.txt", ios::app); // append mode
-    fout << "\nThis line is appended.";
-    fout.close();
-    cout << "Data appended successfully.";
+    ifstream fin("example.txt");
+    string word;
+    int count=0;
+    while(fin >> word) count++;
+    fin.close();
+    cout << "Total words: " << count;
 }
-
