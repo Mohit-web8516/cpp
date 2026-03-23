@@ -126,20 +126,46 @@
 /////////////////////////////////////////
 //linear search
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {4, 7, 2, 9, 11};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int key = 9;
+
+//     int pos = -1;
+//     for(int i=0; i<n; i++) {
+//         if(arr[i] == key) {
+//             pos = i;
+//             break;
+//         }
+//     }
+
+//     if(pos != -1) cout << "Element found at index " << pos;
+//     else cout << "Element not found";
+//     return 0;
+// }
+
+//////////////////////////////////////
+//binary search
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    int arr[] = {4, 7, 2, 9, 11};
+    int arr[] = {2, 4, 6, 8, 10, 12};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int key = 9;
+    int key = 10;
 
-    int pos = -1;
-    for(int i=0; i<n; i++) {
-        if(arr[i] == key) {
-            pos = i;
+    int low = 0, high = n-1, pos = -1;
+    while(low <= high) {
+        int mid = low + (high-low)/2;
+        if(arr[mid] == key) {
+            pos = mid;
             break;
-        }
+        } else if(arr[mid] < key) low = mid+1;
+        else high = mid-1;
     }
 
     if(pos != -1) cout << "Element found at index " << pos;
