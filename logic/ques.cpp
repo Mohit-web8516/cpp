@@ -104,20 +104,45 @@
 
 ////////////////////////////////////
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {10, 25, 3, 99, 45};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+
+//     int maxVal = arr[0], minVal = arr[0];
+//     for(int i=1; i<n; i++) {
+//         if(arr[i] > maxVal) maxVal = arr[i];
+//         if(arr[i] < minVal) minVal = arr[i];
+//     }
+
+//     cout << "Maximum: " << maxVal << endl;
+//     cout << "Minimum: " << minVal << endl;
+//     return 0;
+// }
+
+
+/////////////////////////////////////////
+
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    int arr[] = {10, 25, 3, 99, 45};
+    int arr[] = {4, 7, 2, 9, 11};
     int n = sizeof(arr)/sizeof(arr[0]);
+    int key = 9;
 
-    int maxVal = arr[0], minVal = arr[0];
-    for(int i=1; i<n; i++) {
-        if(arr[i] > maxVal) maxVal = arr[i];
-        if(arr[i] < minVal) minVal = arr[i];
+    int pos = -1;
+    for(int i=0; i<n; i++) {
+        if(arr[i] == key) {
+            pos = i;
+            break;
+        }
     }
 
-    cout << "Maximum: " << maxVal << endl;
-    cout << "Minimum: " << minVal << endl;
+    if(pos != -1) cout << "Element found at index " << pos;
+    else cout << "Element not found";
     return 0;
 }
