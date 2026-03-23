@@ -103,7 +103,7 @@
 // }
 
 ////////////////////////////////////
-
+//min & max
 // #include <iostream>
 // using namespace std;
 
@@ -124,7 +124,7 @@
 
 
 /////////////////////////////////////////
-
+//linear search
 
 #include <iostream>
 using namespace std;
