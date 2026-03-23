@@ -84,21 +84,40 @@
 //////////////////////////////////////////
 // 1. Reverse an Array
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+
+//     int start = 0, end = n-1;
+//     while(start < end) {
+//         swap(arr[start], arr[end]);
+//         start++; end--;
+//     }
+
+//     cout << "Reversed Array: ";
+//     for(int i=0; i<n; i++) cout << arr[i] << " ";
+//     return 0;
+// }
+
+////////////////////////////////////
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 5};
+    int arr[] = {10, 25, 3, 99, 45};
     int n = sizeof(arr)/sizeof(arr[0]);
 
-    int start = 0, end = n-1;
-    while(start < end) {
-        swap(arr[start], arr[end]);
-        start++; end--;
+    int maxVal = arr[0], minVal = arr[0];
+    for(int i=1; i<n; i++) {
+        if(arr[i] > maxVal) maxVal = arr[i];
+        if(arr[i] < minVal) minVal = arr[i];
     }
 
-    cout << "Reversed Array: ";
-    for(int i=0; i<n; i++) cout << arr[i] << " ";
+    cout << "Maximum: " << maxVal << endl;
+    cout << "Minimum: " << minVal << endl;
     return 0;
 }
-
