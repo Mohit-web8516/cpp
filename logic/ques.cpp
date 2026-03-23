@@ -179,19 +179,49 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+
+//     int maxSum = arr[0], currSum = arr[0];
+//     for(int i=1; i<n; i++) {
+//         currSum = max(arr[i], currSum + arr[i]);
+//         maxSum = max(maxSum, currSum);
+//     }
+
+//     cout << "Maximum Subarray Sum: " << maxSum;
+//     return 0;
+// }
+
+
+//////////////////////////////////////
+
+////two sum problems
+
 #include <iostream>
+#include <unordered_set>
 using namespace std;
 
 int main() {
-    int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    int arr[] = {2, 7, 11, 15};
     int n = sizeof(arr)/sizeof(arr[0]);
+    int target = 9;
 
-    int maxSum = arr[0], currSum = arr[0];
-    for(int i=1; i<n; i++) {
-        currSum = max(arr[i], currSum + arr[i]);
-        maxSum = max(maxSum, currSum);
+    unordered_set<int> s;
+    bool found = false;
+
+    for(int i=0; i<n; i++) {
+        if(s.count(target - arr[i])) {
+            cout << "Pair found: " << arr[i] << " and " << target-arr[i];
+            found = true;
+            break;
+        }
+        s.insert(arr[i]);
     }
 
-    cout << "Maximum Subarray Sum: " << maxSum;
+    if(!found) cout << "No pair found";
     return 0;
 }
