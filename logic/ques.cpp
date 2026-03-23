@@ -150,25 +150,48 @@
 //////////////////////////////////////
 //binary search
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {2, 4, 6, 8, 10, 12};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int key = 10;
+
+//     int low = 0, high = n-1, pos = -1;
+//     while(low <= high) {
+//         int mid = low + (high-low)/2;
+//         if(arr[mid] == key) {
+//             pos = mid;
+//             break;
+//         } else if(arr[mid] < key) low = mid+1;
+//         else high = mid-1;
+//     }
+
+//     if(pos != -1) cout << "Element found at index " << pos;
+//     else cout << "Element not found";
+//     return 0;
+// }
+
+
+///////////////////////////////
+//Kadane’s Algorithm (Max Subarray Sum)
+
+
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    int arr[] = {2, 4, 6, 8, 10, 12};
+    int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int key = 10;
 
-    int low = 0, high = n-1, pos = -1;
-    while(low <= high) {
-        int mid = low + (high-low)/2;
-        if(arr[mid] == key) {
-            pos = mid;
-            break;
-        } else if(arr[mid] < key) low = mid+1;
-        else high = mid-1;
+    int maxSum = arr[0], currSum = arr[0];
+    for(int i=1; i<n; i++) {
+        currSum = max(arr[i], currSum + arr[i]);
+        maxSum = max(maxSum, currSum);
     }
 
-    if(pos != -1) cout << "Element found at index " << pos;
-    else cout << "Element not found";
+    cout << "Maximum Subarray Sum: " << maxSum;
     return 0;
 }
