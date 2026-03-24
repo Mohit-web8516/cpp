@@ -297,19 +297,53 @@
 ///Program 2: Kadane’s Algorithm (Maximum Subarray Sum)
 
 
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main() {
+//     vector<int> arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+//     int n = arr.size();
+
+//     int maxSum = arr[0], currSum = arr[0];
+//     for(int i=1; i<n; i++) {
+//         currSum = max(arr[i], currSum + arr[i]);
+//         maxSum = max(maxSum, currSum);
+//     }
+
+//     cout << "Maximum Subarray Sum: " << maxSum << endl; // Expected output: 6
+//     return 0;
+// }
+
+
+/////////////////////////////////////////////
+
+//Program 3: Binary Search in a Sorted Array
+
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    vector<int> arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    vector<int> arr = {2, 4, 6, 8, 10, 12};
     int n = arr.size();
+    int key = 10;
 
-    int maxSum = arr[0], currSum = arr[0];
-    for(int i=1; i<n; i++) {
-        currSum = max(arr[i], currSum + arr[i]);
-        maxSum = max(maxSum, currSum);
+    int low = 0, high = n - 1;
+    int pos = -1;
+
+    while(low <= high) {
+        int mid = low + (high - low) / 2;
+        if(arr[mid] == key) {
+            pos = mid;
+            break;
+        } else if(arr[mid] < key) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
     }
 
-    cout << "Maximum Subarray Sum: " << maxSum << endl; // Expected output: 6
+    if(pos != -1) cout << "Element found at index " << pos << endl;
+    else cout << "Element not found" << endl;
+
     return 0;
 }
