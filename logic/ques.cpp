@@ -201,27 +201,88 @@
 
 ////two sum problems
 
-#include <iostream>
-#include <unordered_set>
+// #include <iostream>
+// #include <unordered_set>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {2, 7, 11, 15};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int target = 9;
+
+//     unordered_set<int> s;
+//     bool found = false;
+
+//     for(int i=0; i<n; i++) {
+//         if(s.count(target - arr[i])) {
+//             cout << "Pair found: " << arr[i] << " and " << target-arr[i];
+//             found = true;
+//             break;
+//         }
+//         s.insert(arr[i]);
+//     }
+
+//     if(!found) cout << "No pair found";
+//     return 0;
+// }
+
+
+
+//////////////////////////////////
+
+//Program 1: Maximum Non-Negative Product in a Matrix
+
+
+
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int arr[] = {2, 7, 11, 15};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    int target = 9;
+class Solution {
+public:
+    int maxProductPath(vector<vector<int>>& grid) {
+        const long long MOD = 1e9 + 7;
+        int m = grid.size(), n = grid[0].size();
 
-    unordered_set<int> s;
-    bool found = false;
+        vector<vector<long long>> maxProd(m, vector<long long>(n, 0));
+        vector<vector<long long>> minProd(m, vector<long long>(n, 0));
 
-    for(int i=0; i<n; i++) {
-        if(s.count(target - arr[i])) {
-            cout << "Pair found: " << arr[i] << " and " << target-arr[i];
-            found = true;
-            break;
+        maxProd[0][0] = minProd[0][0] = grid[0][0];
+
+        // First row
+        for(int j=1; j<n; j++) {
+            maxProd[0][j] = maxProd[0][j-1] * grid[0][j];
+            minProd[0][j] = minProd[0][j-1] * grid[0][j];
         }
-        s.insert(arr[i]);
-    }
 
-    if(!found) cout << "No pair found";
+        // First column
+        for(int i=1; i<m; i++) {
+            maxProd[i][0] = maxProd[i-1][0] * grid[i][0];
+            minProd[i][0] = minProd[i-1][0] * grid[i][0];
+        }
+
+        // Rest of the matrix
+        for(int i=1; i<m; i++) {
+            for(int j=1; j<n; j++) {
+                long long val = grid[i][j];
+                long long maxFromTop = max(maxProd[i-1][j]*val, minProd[i-1][j]*val);
+                long long maxFromLeft = max(maxProd[i][j-1]*val, minProd[i][j-1]*val);
+                long long minFromTop = min(maxProd[i-1][j]*val, minProd[i-1][j]*val);
+                long long minFromLeft = min(maxProd[i][j-1]*val, minProd[i][j-1]*val);
+
+                maxProd[i][j] = max(maxFromTop, maxFromLeft);
+                minProd[i][j] = min(minFromTop, minFromLeft);
+            }
+        }
+
+        long long result = maxProd[m-1][n-1];
+        if(result < 0) return -1;
+        return result % MOD;
+    }
+};
+
+int main() {
+    Solution sol;
+    vector<vector<int>> grid = {{1,-2,1},{1,-2,1},{3,-4,1}};
+    cout << sol.maxProductPath(grid) << endl; // Expected output: 8
     return 0;
 }
